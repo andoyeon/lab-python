@@ -14,6 +14,10 @@ class BasicTv:
     """
     BasicTv 클래스
     """
+    # 클래스 내부에서 선언하는 변수: field
+    max_channel, min_channel = 5, 0     # 변수를 선언하면 유지보수가 쉬움
+    max_volume, min_volume = 5, 0
+
     # 생성자가 호출됐을 때 실행되는 메소드(함수)
     def __init__(self, power, channel, volume):
         print('BasicTv 생성자 호출')
@@ -31,56 +35,64 @@ class BasicTv:
             self.power = True   # TV를 켬
             print('TV On')
 
-    # 전원이 켜져있는 동안에만
-    # 채널 순환(0 ~ 5)
-    # 볼륨은 0 ~ 5 까지
+
     def channelUp(self):
+        # TV가 켜져 있는 경우메나 채널 변경(+1)
         if self.power:
-            self.channel += 1
-            if self.channel == 6:
-                self.channel = 0
+            if self.channel < self.max_channel:
+                # 현재 채널 값이 채널의 최대값보다 작으면
+                self.channel += 1
+            else:
+                # 현재 채널 값이 채널 최대값과 같으면 0으로 순환
+                self.channel = self.min_channel
             print('Channel:', self.channel)
 
 
     def channelDown(self):
+        # TV가 켜져 있는 상태에서만 채널 값을 -1
         if self.power:
-            self.channel -= 1
-            if self.channel == -1:
-                self.channel = 5
+            if self.channel > self.min_channel:
+                # 현재 채널이 채널 최소값보다 큰 경우에만 -1
+                self.channel -= 1
+            else:
+                # 현재 채널이 최소값인 경우는 채널 최대값으로 순환
+                self.channel = self.max_channel
             print('Channel:', self.channel)
 
 
     def volumeUp(self):
+        # TV가 켜져 있는 경우에만 음량 +1
         if self.power:
-            if self.volume < 5:
+            if self.volume < self.max_volume:
+                # 현재 음량이 음량 최대값보다 작은 경우 +1
                 self.volume += 1
+            # 현재 음량이 최대값인 경우 아무 일도 하지 않음(음량 유지)
             print('Volume:', self.volume)
 
 
     def volumeDown(self):
+        # TV가 켜져 있는 경우에만 음량 -1
         if self.power:
-            if self.volume > 0:
+            if self.volume > self.min_volume:
+            # 현재 음량이 음량 최소값보다 큰 경우 -1
                 self.volume -= 1
+            # 현재 음량이 최소값인 경우 아무 일도 하지 않음(음량 유지)
             print('Volume:', self.volume)
-
 # 클래스 설계(정의)
 
-# 클래스의 객체(인스턴스)를 생성해서 변수에 저장
-# 생성자(constructor) 호출 -> 객체(object) 생성
-tv1 = BasicTv(power=False, channel=0, volume=0)
-print(tv1)
-print(tv1.power)
-tv1.powerOnOff()  # TV 켬    # 메모리 주소값을 가지고 있는 변수 사용
-tv1.channelUp()
-tv1.channelUp()
-tv1.channelUp()
-tv1.channelDown()
-tv1.powerOnOff()  # TV 끔
-tv1.powerOnOff()  # TV 켬
-print(tv1.channel)
 
-tv2 = BasicTv(True, 100, 2)
-tv2.volumeDown()
-tv2.volumeDown()
-tv2.volumeDown()
-tv2.volumeDown()
+if __name__ == '__main__':
+    # 클래스의 객체(인스턴스)를 생성해서 변수에 저장
+    # 생성자(constructor) 호출 -> 객체(object) 생성
+    tv1 = BasicTv(False, 0, 0)
+    print('전원상태:', tv1.power)
+    tv1.powerOnOff()    # TV를 켬
+    for _ in range(10):
+        tv1.channelUp()
+    for _ in range(10):
+        tv1.volumeUp()
+    for _ in range(10):
+        tv1.volumeDown()
+
+
+

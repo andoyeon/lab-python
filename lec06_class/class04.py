@@ -34,14 +34,14 @@ class Point:
         return result
 
 
+if __name__ == '__main__':
+    point1 = Point(1, 2)
+    point1.print_point()
 
-point1 = Point(1, 2)
-point1.print_point()
+    point2 = Point(2, 3)
+    point1.print_point()
 
-point2 = Point(2, 3)
-point1.print_point()
-
-print(point1.distance(point2))
-print(sqrt((point1.x-2)**2 + (point1.y-3)**2))
+    print(point1.distance(point2))
+    print(sqrt((point1.x-2)**2 + (point1.y-3)**2))
 
 

@@ -25,16 +25,25 @@ class Employee:
         self.salary *= (1 + pct)
         return self.salary
 
-    def emp_info(self):
-        return f'사번: {self.empno}, 이름: {self.ename}, 급여: {self.salary}, 부서번호: {self.deptno}'
+    def __repr__(self):
+        return f'(사번: {self.empno}, 이름: {self.ename}, 급여: {self.salary}, 부서번호: {self.deptno})'
 
 
 gil_dong = Employee(1010, '홍길동', 1000, 10)  # 객체 생성
-print(gil_dong.emp_info())  # 직원 정보 출력
+print(gil_dong.__repr__())  # 직원 정보 출력
 gil_dong.raise_salary(0.1)  # 급여 인상
-print(gil_dong.emp_info())  # 직원 정보 출력
+print(gil_dong.__repr__())  # 직원 정보 출력
 
 scott = Employee(1011, 'Scott', 10000, 20)
-print(scott.emp_info())
+print(scott.__repr__())
 scott.raise_salary(-0.1)
-print(scott.emp_info())
+print(scott.__repr__())
+
+ohssam = Employee(1012, '오쌤', 500, 30)
+
+employees = [ohssam, gil_dong, scott]
+print(employees)
+
+print(sorted(employees, key=lambda x: x.empno)) # key(정렬 기준) x 직원 -> 사번
+print(sorted(employees, key=lambda x: x.salary))
+print(sorted(employees, key=lambda x: x.ename))
