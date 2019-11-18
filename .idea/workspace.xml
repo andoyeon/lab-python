@@ -2,6 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c614b50-4f58-4a45-a0e8-a655b6b7428b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec07_file/Append.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec07_file/NoFile.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec07_file/data/exam.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec07_file/file02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec07_file/file03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec07_file/file04.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec07_file/file05.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec07_file/file06.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec07_file/file07.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec07_file/test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec07_file/test2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec08_database/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec08_database/ex01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec08_database/ex02_select.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec08_database/ex03_select.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec08_database/ex04_with_as.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec08_database/ex05_insert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec08_database/ex06_insert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec08_database/ex07_databinding.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec08_database/ex08_update.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec08_database/ex09.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lec08_database/oracle_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/cx_Oracle-7.2.3.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/cx_Oracle-7.2.3.dist-info/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/cx_Oracle-7.2.3.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/cx_Oracle-7.2.3.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/cx_Oracle-7.2.3.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/cx_Oracle-7.2.3.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/cx_Oracle.cp37-win_amd64.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/cx_Oracle-doc/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/cx_Oracle-doc/README.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lec07_file/file01.py" beforeDir="false" afterPath="$PROJECT_DIR$/lec07_file/file01.py" afterDir="false" />
     </list>
@@ -26,9 +58,11 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/git-cmd.exe" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -42,8 +76,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.file01">
-    <configuration name="bank" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.ex09">
+    <configuration name="ex05_insert" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lab-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -51,11 +85,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lec06_class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lec08_database" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lec06_class/bank.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lec08_database/ex05_insert.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -64,7 +98,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="file01" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ex06_insert" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lab-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -72,11 +106,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lec07_file" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lec08_database" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lec07_file/file01.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lec08_database/ex06_insert.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -85,7 +119,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="inheritance01" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ex07_databinding" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lab-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -93,11 +127,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lec06_class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lec08_database" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lec06_class/inheritance01.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lec08_database/ex07_databinding.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -106,7 +140,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test02" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ex08_update" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lab-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -114,11 +148,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TEST" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lec08_database" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TEST/test02.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lec08_database/ex08_update.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -127,7 +161,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test03" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ex09" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lab-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -135,11 +169,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TEST" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lec08_database" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TEST/test03.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lec08_database/ex09.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -150,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.file01" />
-        <item itemvalue="Python.test03" />
-        <item itemvalue="Python.test02" />
-        <item itemvalue="Python.bank" />
-        <item itemvalue="Python.inheritance01" />
+        <item itemvalue="Python.ex09" />
+        <item itemvalue="Python.ex08_update" />
+        <item itemvalue="Python.ex07_databinding" />
+        <item itemvalue="Python.ex06_insert" />
+        <item itemvalue="Python.ex05_insert" />
       </list>
     </recent_temporary>
   </component>
@@ -183,5 +217,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
