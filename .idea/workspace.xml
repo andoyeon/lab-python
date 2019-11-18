@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c614b50-4f58-4a45-a0e8-a655b6b7428b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lec08_database/ex10.py" beforeDir="false" afterPath="$PROJECT_DIR$/lec08_database/ex10.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST/test01.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST/test02.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST/test03.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
