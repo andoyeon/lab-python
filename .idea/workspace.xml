@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c614b50-4f58-4a45-a0e8-a655b6b7428b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/TEST/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST/test01.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST/test02.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST/test03.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/image_output/year_gdp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scratch03/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scratch03/ex01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scratch03/ex02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scratch03/ex03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scratch04/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scratch04/ex01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,8 +50,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ex10">
-    <configuration name="ex06_insert" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.ex01 (1)">
+    <configuration name="ex01 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lab-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -55,11 +59,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lec08_database" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch04" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lec08_database/ex06_insert.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch04/ex01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -68,7 +72,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ex07_databinding" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ex01" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lab-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -76,11 +80,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lec08_database" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch03" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lec08_database/ex07_databinding.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch03/ex01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -89,7 +93,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ex08_update" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ex02" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lab-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -97,11 +101,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lec08_database" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch03" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lec08_database/ex08_update.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch03/ex02.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -110,7 +114,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ex09" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ex03" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lab-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -118,11 +122,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lec08_database" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch03" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lec08_database/ex09.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch03/ex03.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -154,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ex01 (1)" />
+        <item itemvalue="Python.ex03" />
+        <item itemvalue="Python.ex02" />
+        <item itemvalue="Python.ex01" />
         <item itemvalue="Python.ex10" />
-        <item itemvalue="Python.ex09" />
-        <item itemvalue="Python.ex08_update" />
-        <item itemvalue="Python.ex07_databinding" />
-        <item itemvalue="Python.ex06_insert" />
       </list>
     </recent_temporary>
   </component>
