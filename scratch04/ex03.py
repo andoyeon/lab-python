@@ -68,9 +68,42 @@ def transpose(matrix):
     :param matrix: n x m 행렬
     :return: m x n 행렬
     """
-    # return [i for i in zip(*matrix)]
+    nrows, ncols = shape(matrix)
+    t = make_matrix(ncols, nrows, lambda i, j: matrix[j][i])
+    return t
 
 
+def transpose(matrix):
+    nrows = len(matrix)     # 원본 행렬의 행의 개수
+    ncols = len(matrix[0])  # 원본 행렬의 열의 개수
+    # t = []  # 전치 행렬
+    # for j in range(ncols):  # 원본 행렬의 열 개수만큼 반복
+    #     # 원본 행렬의 열(column)을 전치 행렬의 행(row)로 추가
+    #     t.append(get_column(matrix, j))
+    # return t
+    return [get_column(matrix, j) for j in range(ncols)]
+
+
+def transpose(matrix):
+    nrows = len(matrix)
+    ncols = len(matrix[0])
+    # t = []
+    # for j in range(ncols):
+    #     t_row = []  # 전치 행렬의 행(row)
+    #     for i in range(nrows):
+    #         t_row.append(matrix[i][j])
+    #     t.append(t_row)
+    # return t
+    return [[matrix[i][j] for i in range(nrows)] for j in range(ncols)]
+
+
+def transpose(matrix):
+    print('unpacking 연산자 *를 사용한 transpose')
+    # t = []
+    # for col in zip(*matrix):
+    #     t.append(list(col))
+    # return t
+    return [list(x) for x in zip(*matrix)]
 
 if __name__ == '__main__':
     # 2x3 행렬(row=2, column=3)
@@ -119,10 +152,17 @@ if __name__ == '__main__':
                                   lambda x, y: 1 if x == y else 0)
     print(identity_matrix)
 
-    A = [
-        [1, 2, 3],
-        [4, 5, 6]
-    ]
+    print(transpose(A))
+    print(transpose(B))
+
+    a = [1, 2, 3]
+    b = [4, 5, 6]
+    c = [7, 8, 9]
+    for x, y, z in zip(a, b, c):
+        print(x, y, z)
+
+    # unpacking 연산자: *
     print('A =', A)
-    test = transpose(A)
-    print('test =', test)
+    print('*A =', *A)
+    print('B =', B)
+    print('*B =', *B)
