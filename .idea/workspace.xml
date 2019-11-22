@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c614b50-4f58-4a45-a0e8-a655b6b7428b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scratch04/ex04.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scratch05/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scratch05/ex01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scratch06/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scratch06/ex01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scratch06/ex02.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scratch04/ex03.py" beforeDir="false" afterPath="$PROJECT_DIR$/scratch04/ex03.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scratch05/ex01.py" beforeDir="false" afterPath="$PROJECT_DIR$/scratch05/ex01.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,8 +47,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ex01">
-    <configuration name="ex01 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.ex02">
+    <configuration name="ex01 (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lab-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -56,11 +56,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch04" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch06" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch04/ex01.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch06/ex01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -90,7 +90,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ex02 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ex02" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lab-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -98,11 +98,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch04" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch06" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch04/ex02.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch06/ex02.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -155,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ex02" />
+        <item itemvalue="Python.ex01 (2)" />
         <item itemvalue="Python.ex01" />
         <item itemvalue="Python.ex04" />
         <item itemvalue="Python.ex03 (1)" />
-        <item itemvalue="Python.ex02 (1)" />
-        <item itemvalue="Python.ex01 (1)" />
       </list>
     </recent_temporary>
   </component>

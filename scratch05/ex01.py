@@ -146,10 +146,18 @@ def covariance(x, y):
     :param y: 원소 n개인 (1차원) 리스트
     :return: 공분산
     """
-    n = len(x)
-    x_bar = mean(x)
-    y_bar = mean(y)
-    return sum([(xi-x_bar)*(yi-y_bar) for xi, yi in zip(x, y)]) / (n - 1)
+    # n = len(x)
+    x_bar = mean(x) # x의 평균
+    y_bar = mean(y) # y의 평균
+    # return sum([(xi-x_bar)*(yi-y_bar) for xi, yi in zip(x, y)]) / (n - 1)
+
+    x_deviations = [x_i - x_bar for x_i in x]   # 편차들의 리스트
+    y_deviations = [y_i - y_bar for y_i in y]
+    sum_of_deviations = dot(x_deviations, y_deviations)
+    # sum_of_deviations = 0
+    # for xd, yd in zip(x_deviations, y_deviations):
+    #     sum_of_deviations += xd * yd
+    return sum_of_deviations / (len(x) - 1)
 
 
 def correlation(x, y):
@@ -161,7 +169,16 @@ def correlation(x, y):
     :param y: 원소 n개인 (1차원) 리스트
     :return: 상관 계수
     """
-    return covariance(x, y) / (standard_deviation(x) * standard_deviation(y))
+    sd_x = standard_deviation(x)
+    sd_y = standard_deviation(y)
+    if sd_x != 0 and sd_y != 0:
+        corr = covariance(x, y) / (sd_x * sd_y)
+    else:
+        corr = 0
+    return corr
+
+    # return covariance(x, y) / (standard_deviation(x) * standard_deviation(y))
+    # 표준편차가 0일 경우는 0을 리턴. -> 에러 발생시킴
 
 
 if __name__ == '__main__':
@@ -196,3 +213,19 @@ if __name__ == '__main__':
 
     cor = correlation(x, y)
     print('correlation =', cor)
+
+    x = [2, 2, 3, 3, 4, 4, 4, 6, 6, 6, 100]
+    y = [10, 2, 5, 3, 4, 1, 4, 0, 6, 1, 7]
+    cov = covariance(x, y)
+    print('covariance =', cov)
+    # covariance = 27.872727272727275
+    cor = correlation(x, y)
+    print('correlation =', cor)
+    # correlation = 0.32252400003752607
+
+    x = [-3, -2, -1, 0, 1, 2, 3]
+    y = [3, 2, 1, 0, 1, 2, 3]
+    # y = |x|
+    print(correlation(x, y))
+    # 3.0792046480667075e-17 => 0
+    # 절대 관계이지만 상관계수는 0으로 보여줌 => 신뢰x
