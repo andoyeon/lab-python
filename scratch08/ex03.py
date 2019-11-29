@@ -1,7 +1,9 @@
 """
 편미분(Partial Differentiation)을 이용한 경사 하강법
 """
-from scratch04.ex01 import scalar_multiply, add
+import random
+
+from scratch04.ex01 import scalar_multiply, add, distance
 
 
 def partial_difference_quotient(f, v, i, h=0.001):
@@ -53,5 +55,40 @@ def gradient_step(v, gradient, step=-0.1):
 
 
 if __name__ == '__main__':
-    # f(x1, x2) = x1 ** 2 + x2 ** 2
+    # f([x1, x2]) = x1 ** 2 + x2 ** 2 의 최소값: (0,0)인지 확인
+    # g([x1, x2]) = (x1 - 1) ** 2 + (x2 + 1) ** 2 의 최소값: (1, -1)
+    def f(v):
+        """ v = [x1, x2] 가정 """
+        return v[0] ** 2 + v[1] ** 2
+
+
+    def g(v):
+        return (v[0] - 1) ** 2 + (v[1] + 1) ** 2
+
+
+    random.seed(1129)
+    # 기울기를 계산할 최초의 (x1, y1) 좌표를 임의로 선택
+    init_v = [random.randint(-10, 10), random.randint(-10, 10)]
+    print('init_v =', init_v)
+
+    tolerance = 0.000001    # 반복문 을 종료할 임계값
+
+    count = 0
+    while True: # 무한 반복문
+        count += 1
+        # 선택한 좌표(x1, y1)에서 기울기 계산
+        gradient = estimate_gradient(g, init_v)
+        # 다음 좌표로 점을 이동시킴
+        next_v = gradient_step(init_v, gradient, step=-0.3)
+        print(f'{count}: next_v = {next_v}')
+        # 이동 전 위치와 이동 후 위치 사이의 거리를 계산
+        if distance(init_v, next_v) < tolerance:
+            # 이동 거리가 임계값보다 작다면 반복문을 종료
+            break
+        else:
+            # 이동시킨 위치에서 gradient를 다시 계산하기 위해서
+            init_v = next_v
+
+
+
 
