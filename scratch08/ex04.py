@@ -54,6 +54,7 @@ def minibatches(dataset, batch_size, shuffle=True):
 
     # 배치 시작 인덱스: 0, batch_size, 2*batch_size, ...
     batch_starts = [s for s in range(0, len(dataset), batch_size)]
+    # [[ds[0], ..., ds[size-1]], [ds[size], ... ds[2size-1]], ...]
     mini = [dataset[s:s+batch_size] for s in batch_starts]
     return mini
 

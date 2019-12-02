@@ -1,91 +1,105 @@
 """
-1) R의 ggplot2 패키지에 포함된 mpg 데이터 프레임을 csv 파일 형식으로 저장
-2) 저장된 csv 파일을 파이썬 프로젝트의 scratch08 폴더에 복사
-3) 저장된 csv 파일을 읽어서 배기량(displ) [4]과 시내 연비(cty) [8]
-    데이터를 추출
-4) 선형 회귀식
-	cty = slope * displ + intersect
-    의 기울기(slope)와 절편(intersect)을 경사 하강법의 3가지 방법
-    (stochastic, batch, mini-batch)으로 결정하고 값을 비교
-5) 배기량과 시내 연비 산점도 그래프(scatter plot)과 선형 회귀 직선을 하나의 plot으로 출력해서 결과 확인
+mpg.csv 파일을 읽고, 경사 하강법을 사용해서 선형 회귀식 찾기
+cty = slope * displ + intercept
 """
-import csv
 import random
-
-from scratch08.ex03 import gradient_step
-from scratch08.ex04 import linear_gradient
 
 import matplotlib.pyplot as plt
 
-"""
-line_counter = 0
-header = []
-mpg_list = []
-with open('mpg.csv') as mpg:
-    while True:
-        line = mpg.readline()
-        if not line:
-            break
-        if line_counter == 0:
-            header = line.split(",")
-        else:
-            mpg_list.append(line.split(","))
-        line_counter += 1
+from scratch04.ex01 import vector_mean
+from scratch08.ex03 import gradient_step
+from scratch08.ex04 import minibatches, linear_gradient
 
-print('header: ', header)
-print('mpg_list: ', mpg_list)
-"""
-line_counter = 0
-header = []
-mpg_list = []
-displ_data = []
-cty_data = []
+with open('mpg.csv', encoding='UTF-8') as f:
+    # 파일 사용(read, write)이 모두 끝났을 때 close() 자동 호출
+    f.readline()    # 첫번째 라인을 읽고 버림 - 컬럼 이름들
+    # 한 줄씩 읽어서
+    # 그 줄의 앞 뒤 공백들(줄바꿈, \n)을 제거하고,
+    # ','로 문자열을 분리해서 만든 리스트를 df에 저장
+    df = [line.strip().split(sep=',') for line in f]
 
-with open('mpg.csv') as mpg:
-    mpg_data = csv.reader(mpg)
-    for row in mpg_data:
-        if line_counter == 0:
-            header = row
-        else:
-            displ_data.append(float(row[3]))
-            cty_data.append(int(row[8]))
-        line_counter += 1
+print(df[0:5])  # 데이터 프레임 확인
+# 배기량(displ)과 시내 연비(cty)만 추출 - 데이터 타입: 숫자
+displ = [float(row[2]) for row in df]
+cty = [float(row[7]) for row in df]
+displ_cty = [(d, c) for d, c in zip(displ, cty)]
+print(displ_cty[0:5])
 
 
+def mini_batch_gd(dataset,
+                  epochs=5000,
+                  learning_rate=0.001,
+                  batch_size=1,
+                  shuffle=True):
+    dataset = dataset.copy()    # 원본 데이터를 복사해서 사용
+    # 경사 하강법으로 찾으려고 하는 직선의 기울기와 절편의 초기값
+    theta = [random.randint(-10, 10),
+             random.randint(-10, 10)]
+    print('theta 초기값:', theta)
+    for epoch in range(epochs):    # epochs 횟수만큼 반복
+        if shuffle:
+            random.shuffle(dataset) # 무작위로 순서를 섞음
+        mini_batch = minibatches(dataset, batch_size, shuffle)
+        for batch in mini_batch:    # 미니 배치 크기만큼 반복
+            # 미니 배치 안의 점들에 대해서 gradient들을 계산
+            gradients = [linear_gradient(x, y, theta)
+                         for x, y in batch]
+            # gradient들의 평균을 계산
+            gradient = vector_mean(gradients)
+            # gradient를 사용해서 파라미터 theta를 변경
+            theta = gradient_step(theta, gradient, -learning_rate)
+    return theta
 
-print(f'header = {header}')
-print(f'displ = {displ_data}')
-print(f'cty = {cty_data}')
 
-# 그래프
-plt.scatter(displ_data, cty_data)
+# 미니 배치 경사 하강법에서 배치 사이즈가 1인 경우,
+# stochastic 경사 하강법
+print("=== stochastic gradient descent ===")
+theta_stochastic = mini_batch_gd(displ_cty,
+                                 epochs=200,
+                                 shuffle=False)
+print(theta_stochastic)    # (-2.5, 25.8)
+
+# 미니 배치 경사 하강법에서 배치 사이즈가 데이터세트 크기와 같은 경우,
+# batch 경사 하강법
+print("=== batch gradient descent ===")
+theta_batch = mini_batch_gd(displ_cty,
+                            epochs=5000,
+                            batch_size=len(displ_cty),
+                            learning_rate=0.01,
+                            shuffle=True)
+print(theta_batch)
+
+# 미니 배치 경사 하강법
+print("=== mini batch gradient descent ===")
+theta_mini = mini_batch_gd(displ_cty,
+                           epochs=1000,
+                           learning_rate=0.01,
+                           batch_size=32,
+                           shuffle=True)
+print(theta_mini)
+
+
+def linear_regression(x, theta):
+    slope, intercept = theta
+    return slope * x + intercept    # y = ax + b
+
+
+
+plt.scatter(displ, cty)
+
+ys_stochastic = [linear_regression(x, theta_stochastic) for x in displ]
+plt.plot(displ, ys_stochastic, color='red', label='Stochastic GD')
+
+ys_batch = [linear_regression(x, theta_batch) for x in displ]
+plt.plot(displ, ys_batch, color='green', label='Batch GD')
+
+ys_mini = [linear_regression(x, theta_mini) for x in displ]
+plt.plot(displ, ys_mini, color='yellow', label='Mini GD')
+
+plt.xlabel('displacement(cc)')
+plt.ylabel('efficiency(mpg)')
+plt.title('Fuel Efficiency vs Displacement')
+plt.legend()
 plt.show()
-
-
-# 4) 선형 회귀식
-#	cty = slope * displ + intersect
-#    의 기울기(slope)와 절편(intersect)을 경사 하강법의 3가지 방법
-# dataset = [(displ, 5 * cty + 1) for displ in displ_data for cty in cty_data]
-
-dataset = [(cty, displ) for displ in displ_data for cty in cty_data]
-print(dataset[0:5])
-
-
-if __name__ == '__main__':
-    print('=== 확률적 경사 하강법 ===')
-    theta = [10, 1]
-    step = 0.001
-
-    for epoch in range(1000):
-        random.shuffle(dataset)
-        for x, y in dataset:
-            gradient = linear_gradient(x, y, theta)
-            theta = gradient_step(theta, gradient, -step)
-        if (epoch + 1) % 100 == 0:
-            print(f'{epoch}: {theta}')
-
-
-
-
 
 
