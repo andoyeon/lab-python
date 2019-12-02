@@ -13,3 +13,29 @@ DataFrame에서 행 레이블이 840~851인 행들의
 DataFrame에서 연도(year)별 기대 수명의 평균을 출력
 DataFrame에서 연도(year)별, 대륙(continent)별 기대 수명의 평균을 출력
 """
+import os
+
+import pandas as pd
+
+
+file_path = os.path.join('gapminder.tsv')
+df = pd.read_csv(file_path, delimiter='\t')
+print('shape:', df.shape)   # 행:1704, 열:6
+print(df.head())
+print(df.tail())
+print('data types:', df.dtypes)
+
+print(df[['country', 'lifeExp', 'gdpPercap']])
+
+rows = [0, 99, 999]
+print(df.iloc[rows])
+
+cols = ['country', 'lifeExp', 'gdpPercap']
+print(df.loc[840:851, cols])
+
+print('연도별 기대수명 평균')
+print(df.groupby('year').mean()['lifeExp'])
+
+print()
+print('연도별, 대륙별 기대수명 평균')
+print(df.groupby(['year', 'continent']).mean()['lifeExp'])

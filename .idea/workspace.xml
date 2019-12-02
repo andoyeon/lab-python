@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c614b50-4f58-4a45-a0e8-a655b6b7428b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scratch09/ex02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scratch09/ex03.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scratch09/ex04.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scratch09/ex05.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scratch09/gapminder.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scratch09/stock_price.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scratch09/test_result.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scratch09/ex01.py" beforeDir="false" afterPath="$PROJECT_DIR$/scratch09/ex01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scratch09/ex05.py" beforeDir="false" afterPath="$PROJECT_DIR$/scratch09/ex05.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +44,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ex04 (1)">
+  <component name="RunManager" selected="Python.ex05 (1)">
     <configuration name="ex01" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lab-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -136,7 +129,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ex05" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ex05 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lab-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -144,11 +137,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch08" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch09" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch08/ex05.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch09/ex05.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -159,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ex05 (1)" />
         <item itemvalue="Python.ex04 (1)" />
         <item itemvalue="Python.ex03" />
         <item itemvalue="Python.ex02" />
         <item itemvalue="Python.ex01" />
-        <item itemvalue="Python.ex05" />
       </list>
     </recent_temporary>
   </component>
