@@ -28,18 +28,18 @@ mpg = pd.read_csv(file_path, encoding='UTF-8')
 print(mpg.dtypes)
 
 # cty 컬럼의 평균을 계산
-print(type(mpg['cty'])) # mpg['cty']의 데이터 타입: Series
+print(type(mpg['cty'])) # mpg['cty']의 데이터 타입: Series(1차원)
 print(mpg['cty'])
 
-print(type(mpg[['cty']]))   # mpg[['cty']]의 데이터 타입: DataFrame
+print(type(mpg[['cty']]))   # mpg[['cty']]의 데이터 타입: DataFrame(2차원)
 print(mpg[['cty']]) # select cty from mpg;
 
 cty_mean = mpg['cty'].mean()
 print('cty mean:', cty_mean)    # cty mean: 16.858974358974358
 
 # cty 컬럼의 값이 crt 평균보다 큰 레코드들을 출력
-mpg_cty_above = mpg[mpg['cty'] >= cty_mean]
+mpg_cty_above = mpg[mpg['cty'] > cty_mean]
 print(mpg_cty_above)
 
-# cty가 평균 이상인 자동차들의 model, displ, cty, hwy 컬럼을 출력
-print(mpg_cty_above[['model', 'displ', 'cty', 'hwy']])
+# cty가 평균 이상인 자동차들의 model, cty, hwy 컬럼을 출력
+print(mpg_cty_above[['model', 'cty', 'hwy']])
