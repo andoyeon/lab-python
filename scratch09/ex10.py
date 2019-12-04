@@ -84,10 +84,13 @@ if __name__ == '__main__':
         emp_dept_right = pd.merge(emp_df, dept_df, 'right', on='DEPTNO')
         print(emp_dept_right)
 
+        print('\n')
         # emp 테이블에서 mgr과 empno가 일치하는 join
         # 1) inner, 2) left, 3) right join
-        emp_inner = emp_df.merge(emp_df, 'inner')
+        emp_inner = pd.merge(emp_df, emp_df, 'inner', left_on='MGR', right_on='EMPNO')
         print(emp_inner)
-
-
+        emp_left = pd.merge(emp_df, emp_df, 'left', left_on='MGR', right_on='EMPNO')
+        print(emp_left)
+        emp_right = pd.merge(emp_df, emp_df, 'right', left_on='MGR', right_on='EMPNO')
+        print(emp_right)
 

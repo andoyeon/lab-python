@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c614b50-4f58-4a45-a0e8-a655b6b7428b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scratch09/emp2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scratch09/ex10.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/cx_Oracle-7.3.0.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/cx_Oracle-7.3.0.dist-info/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/cx_Oracle-7.3.0.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/cx_Oracle-7.3.0.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/cx_Oracle-7.3.0.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/cx_Oracle-7.3.0.dist-info/top_level.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scratch09/ex08.py" beforeDir="false" afterPath="$PROJECT_DIR$/scratch09/ex08.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scratch09/ex09.py" beforeDir="false" afterPath="$PROJECT_DIR$/scratch09/ex09.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/cx_Oracle-7.2.3.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/cx_Oracle-7.2.3.dist-info/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/cx_Oracle-7.2.3.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/cx_Oracle-7.2.3.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/cx_Oracle-7.2.3.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/cx_Oracle-7.2.3.dist-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/cx_Oracle.cp37-win_amd64.pyd" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/cx_Oracle.cp37-win_amd64.pyd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scratch09/ex10.py" beforeDir="false" afterPath="$PROJECT_DIR$/scratch09/ex10.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,22 +202,22 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="1115" y="481" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1575424015199" />
-    <state width="1212" height="425" key="GridCell.Tab.0.bottom" timestamp="1575449742312">
+    <state width="1212" height="425" key="GridCell.Tab.0.bottom" timestamp="1575450833580">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1212" height="425" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1575449742312" />
-    <state width="1212" height="425" key="GridCell.Tab.0.center" timestamp="1575449742312">
+    <state width="1212" height="425" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1575450833580" />
+    <state width="1212" height="425" key="GridCell.Tab.0.center" timestamp="1575450833580">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1212" height="425" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1575449742312" />
-    <state width="1212" height="425" key="GridCell.Tab.0.left" timestamp="1575449742312">
+    <state width="1212" height="425" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1575450833580" />
+    <state width="1212" height="425" key="GridCell.Tab.0.left" timestamp="1575450833580">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1212" height="425" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1575449742312" />
-    <state width="1212" height="425" key="GridCell.Tab.0.right" timestamp="1575449742312">
+    <state width="1212" height="425" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1575450833580" />
+    <state width="1212" height="425" key="GridCell.Tab.0.right" timestamp="1575450833580">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1212" height="425" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1575449742312" />
+    <state width="1212" height="425" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1575450833580" />
     <state x="767" y="228" key="SettingsEditor" timestamp="1575420667680">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
