@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c614b50-4f58-4a45-a0e8-a655b6b7428b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/scratch10/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scratch10/emp_df.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scratch10/ex01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scratch10/ex02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scratch10/ex03.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scratch09/ex10.py" beforeDir="false" afterPath="$PROJECT_DIR$/scratch09/ex10.py" afterDir="false" />
     </list>
@@ -36,8 +41,8 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.ex10">
-    <configuration name="ex06" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.ex03">
+    <configuration name="ex01" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lab-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -45,11 +50,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch09" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch10" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch09/ex06.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch10/ex01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -58,7 +63,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ex07" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ex02" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lab-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -66,11 +71,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch09" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch10" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch09/ex07.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch10/ex02.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ex03" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="lab-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch10" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch10/ex03.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -92,27 +118,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch09/ex08.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ex09" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="lab-python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch09" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch09/ex09.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -144,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.ex10" />
-        <item itemvalue="Python.ex09" />
+        <item itemvalue="Python.ex03" />
+        <item itemvalue="Python.ex02" />
         <item itemvalue="Python.ex08" />
-        <item itemvalue="Python.ex07" />
-        <item itemvalue="Python.ex06" />
+        <item itemvalue="Python.ex01" />
+        <item itemvalue="Python.ex10" />
       </list>
     </recent_temporary>
   </component>
@@ -202,30 +207,30 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="1115" y="481" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1575424015199" />
-    <state width="1212" height="425" key="GridCell.Tab.0.bottom" timestamp="1575450833580">
+    <state width="1897" height="399" key="GridCell.Tab.0.bottom" timestamp="1575525624670">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1212" height="425" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1575450833580" />
-    <state width="1212" height="425" key="GridCell.Tab.0.center" timestamp="1575450833580">
+    <state width="1897" height="399" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1575525624670" />
+    <state width="1897" height="399" key="GridCell.Tab.0.center" timestamp="1575525624670">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1212" height="425" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1575450833580" />
-    <state width="1212" height="425" key="GridCell.Tab.0.left" timestamp="1575450833580">
+    <state width="1897" height="399" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1575525624670" />
+    <state width="1897" height="399" key="GridCell.Tab.0.left" timestamp="1575525624670">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1212" height="425" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1575450833580" />
-    <state width="1212" height="425" key="GridCell.Tab.0.right" timestamp="1575450833580">
+    <state width="1897" height="399" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1575525624670" />
+    <state width="1897" height="399" key="GridCell.Tab.0.right" timestamp="1575525624670">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1212" height="425" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1575450833580" />
+    <state width="1897" height="399" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1575525624670" />
     <state x="767" y="228" key="SettingsEditor" timestamp="1575420667680">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="767" y="228" key="SettingsEditor/0.0.1920.1160@0.0.1920.1160" timestamp="1575420667680" />
-    <state width="538" height="501" key="javadoc.popup.new" timestamp="1575449627508">
+    <state width="538" height="501" key="javadoc.popup.new" timestamp="1575514613626">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="538" height="501" key="javadoc.popup.new/0.0.1920.1160@0.0.1920.1160" timestamp="1575449627508" />
+    <state width="538" height="501" key="javadoc.popup.new/0.0.1920.1160@0.0.1920.1160" timestamp="1575514613626" />
     <state x="233" y="260" width="672" height="678" key="search.everywhere.popup" timestamp="1575362133196">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>

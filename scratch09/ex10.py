@@ -28,6 +28,17 @@ def select_all_from(table, cursor):
     data_frame.columns = get_column_names_of(table, cursor)
     return data_frame
 
+def select_all_from(table, cursor):
+    sql = f'select * from {table.upper()}'
+    # from 구문에서 테이블 이름은 ''로 감싸면 안되기 때문에
+    # data binding 방식을 사용할 수 없다.
+    cursor.execute(sql)
+    # data = cursor.fetchall()  # [row for row in cursor]
+    data_frame = pd.DataFrame(cursor)  # pd.DataFrame(data)
+    # 데이터 프레임에 컬럼 이름을 설정
+    data_frame.columns = get_column_names_of(table, cursor)
+    return data_frame
+
 
 if __name__ == '__main__':
     # 오라클 DB 서버에 접속
@@ -87,10 +98,17 @@ if __name__ == '__main__':
         print('\n')
         # emp 테이블에서 mgr과 empno가 일치하는 join
         # 1) inner, 2) left, 3) right join
-        emp_inner = pd.merge(emp_df, emp_df, 'inner', left_on='MGR', right_on='EMPNO')
+        emp_inner = pd.merge(emp_df, emp_df, 'inner',
+                             left_on='MGR', right_on='EMPNO')
         print(emp_inner)
-        emp_left = pd.merge(emp_df, emp_df, 'left', left_on='MGR', right_on='EMPNO')
+
+        emp_left = pd.merge(emp_df, emp_df, 'left',
+                            left_on='MGR', right_on='EMPNO')
         print(emp_left)
-        emp_right = pd.merge(emp_df, emp_df, 'right', left_on='MGR', right_on='EMPNO')
+
+        # right_on은 있으나 left_on에는 없는 row도 보여줌
+        emp_right = pd.merge(emp_df, emp_df, 'right',
+                             left_on='MGR', right_on='EMPNO')
         print(emp_right)
+        print(emp_right[['EMPNO_x','ENAME_x', 'MGR_x', 'EMPNO_y', 'ENAME_y']])
 
