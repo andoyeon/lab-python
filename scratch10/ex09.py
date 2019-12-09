@@ -24,4 +24,4 @@ with open('web02.html', mode='r', encoding='utf-8') as f:
     # HTML 문서 안의 "id1" 속성을 갖는 요소를 찾음
     print(soup.find(attrs={'id': 'id1'}))
     print(soup.find(id='id1').text)
-    print(soup(id='id1')[0].text)   # find_all
+    print(soup(id='id1')[0].text)   # soup.find_all(id='id1')[0].test
