@@ -3,127 +3,184 @@ ex05.py
 Boston house prices dataset
 """
 import numpy as np
-from sklearn import linear_model
+from sklearn.linear_model import LinearRegression
 from sklearn.datasets import load_boston
 import matplotlib.pyplot as plt
-
-# 보스턴 집값 데이터 세트 로딩
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import PolynomialFeatures
 
-datasets = load_boston()
-X = datasets.data
-y = datasets.target
-print('X[5] =', X[:5])
-print('y[5] =', y[:5])
-features = datasets.feature_names
+
+# 보스턴 집값 데이터 세트 로딩
+dataset = load_boston() # Bunch: 파이썬의 dict와 비슷한 타입
+print(type(dataset))
+print(dataset.keys())
+print(dataset['DESCR']) # dataset.DESCR
+
+# 데이터와 타켓을 구분
+X = dataset['data']     # dataset.data
+y = dataset['target']   # dataset.target
+print('X shape:', X.shape)  # (506, 13)
+print('X[2] =', X[:2])
+print('y shape:', y.shape)
+print('y[5] =', y[:5])  # (506,)
+features = dataset['feature_names'] # dataset.feature_names
 print('feature names:', features)
 
-print('X shape:', X.shape)
-print('y shape:', y.shape)
-
-
-# 데이터 탐색 -> 그래프
-fig, ax = plt.subplots(3, 5)
-# ax: 3x5 형태의 2차원 배열(ndarray)
+# 데이터 탐색 -> y ~ feature 산점도 그래프
+fig, ax = plt.subplots(4, 4)    # 16개의 subplot을 생성
+# ax: 4x4 형태의 2차원 배열(ndarray)
 ax_flat = ax.flatten()
-for i in range(len(features)):
-    subplot = ax_flat[i]
-    subplot.scatter(X[:, i], y)
-    subplot.set_title(features[i])
+for i in range(len(features)):  # 특성(변수)들의 개수만큼 반복
+    axis = ax_flat[i]
+    axis.scatter(X[:, i], y)    # y ~ feature 산점도 그래프
+    axis.set_title(features[i]) # subplot에 타이틀 추가
 plt.show()
-
 
 
 # 학습 세트/검증 세트 나눔
-X_train = X[:-50]
-X_test = X[-50:]
-y_train = y[:-50]
-y_test = y[-50:]
+np.random.seed(1217)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
+print(f'X_train len: {len(X_train)}, X_test len: {len(X_test)}')
 
 # 학습 세트를 사용해서 선형 회귀 - 단순 선형 회귀, 다중 선형 회귀
+# price = b0 + b1 * rm: 주택 가격 ~ 방의 개수
+X_train_rm = X_train[:, np.newaxis, 5]  # 2차원 배열 형태
+X_test_rm = X_test[:, np.newaxis, 5]
+print(f'X_train_rm: {X_train_rm.shape}, X_test_rm: {X_test_rm.shape}')
+
+lin_reg = LinearRegression()    # Linear Regression 객체 생성
+lin_reg.fit(X_train_rm, y_train)    # fitting(적합)/학습(training) - b0, b1 찾기
+print(f'intercept: {lin_reg.intercept_}, coefficients: {lin_reg.coef_}')
+
 # 검증 세트를 이용해서 예측 -> 그래프
-# y ~ RM
-RM = X[:, np.newaxis, 5]
-print('RM.shape:', RM.shape)
-print('RM[5] =', RM[:5])
-
-RM_train = RM[:-50]
-RM_test = RM[-50:]
-
-lin_reg = linear_model.LinearRegression()
-lin_reg.fit(RM_train, y_train)
-print('Coefficients:', lin_reg.coef_)   # 9.15398367
-
-y_pred = lin_reg.predict(RM_test)
-
-plt.scatter(RM_test, y_test)    # 실제값
-plt.plot(RM_test, y_pred, 'ro-')    # 예측값
-plt.title('House Price vs RM')
+y_pred_rm = lin_reg.predict(X_test_rm)
+# 실제값(scatter), 예측값(plot) 그래프
+plt.scatter(X_test_rm, y_test)
+plt.plot(X_test_rm, y_pred_rm, 'r')
+plt.title('Price ~ RM')
 plt.xlabel('RM')
+plt.ylabel('Price')
 plt.show()
 
-# MSE 계산
-
-
-# y ~ DIS
-DIS = X[:, np.newaxis, 7]
-DIS_train = DIS[:-50]
-DIS_test = DIS[-50:]
-
-lin_reg.fit(DIS_train, y_train)
-print('Coefficients:', lin_reg.coef_)   # 1.00229568
-
-y_pred = lin_reg.predict(DIS_test)
-
-plt.scatter(DIS_test, y_test)
-plt.plot(DIS_test, y_pred, 'ro-')
-plt.title('House Price vs DIS')
-plt.xlabel('DIS')
-plt.show()
-
-# y ~ LSTAT
-LSTAT = X[:, np.newaxis, 12]
-LSTAT_train = LSTAT[:-50]
-LSTAT_test = LSTAT[-50:]
-
-lin_reg.fit(LSTAT_train, y_train)
-print('Coefficients:', lin_reg.coef_)   # -0.95763084
-
-y_pred = lin_reg.predict(LSTAT_test)
-
-plt.scatter(LSTAT_test, y_test)
-plt.plot(LSTAT_test, y_pred, 'ro-')
-plt.title('House Price vs LSTAT')
-plt.xlabel('LSTAT')
-plt.show()
-
-
-# y ~ RM + DIS
-# X = np.c_[RM, DIS]
-# print('X[5] =', X[:5])
-#
-# poly_feature = PolynomialFeatures(degree=2, include_bias=False)
-# X_poly = poly_feature.fit_transform(X)
-# print('X poly =', X_poly[:5])
-#
-# X_train = X_poly[:-50]
-# X_test = X_poly[-50:]
-#
-# lin_reg.fit(X_train, y)
-# print('절편(intercept) =', lin_reg.intercept_)
-# print('계수(coefficients) =', lin_reg.coef_)
-#
-# y_pred = lin_reg.predict(X_test)
-# print(y_pred[:5])
-
-# plt.scatter(X_test, y_test)
-# plt.plot(X_test, y_pred)
-# plt.title('House Price ~ RM + DIS')
-# plt.xlabel('RM + DIS')
-# plt.show()
-
-# Mean Square Error 계산
-
+# MSE(Mean Squared Error: 오차 제곱들의 평균) 계산
+# error = y - y_hat, error^2 = (y - y_hat)^2
+# MSE = sum(error2) / 개수
+mse = mean_squared_error(y_test, y_pred_rm)
+# RMSE(Squared-Root MSE)
+rmse = np.sqrt(mse)
+print('Price ~ RM: RMSE =', rmse)
 
 # R2-score 계산
+r2_1 = lin_reg.score(X_test_rm, y_test)
+r2_2 = r2_score(y_test, y_pred_rm)
+print(f'Price ~ RM: R^2 = {r2_1}, {r2_2}')
 
+# Price ~ LSTAT 선형 회귀: price = b0 + b1 * lstat
+X_train_lstat = X_train[:, np.newaxis, 12]  # 학습 세트
+X_test_lstat = X_test[:, np.newaxis, 12]    # 검증 세트
+
+lin_reg.fit(X_train_lstat, y_train) # 모델 fit, train
+print(f'Price ~ LSTAT: intercept: {lin_reg.intercept_}, coefficients: {lin_reg.coef_}')
+
+y_pred_lstat = lin_reg.predict(X_test_lstat)    # 예측, 테스트
+
+plt.scatter(X_test_lstat, y_test)   # 실제값 산점도 그래프
+plt.plot(X_test_lstat, y_pred_lstat, 'r')    # 예측값 선 그래프
+plt.title('Price ~ LSTAT')
+plt.xlabel('LSTAT')
+plt.ylabel('Price')
+plt.show()
+
+mse = mean_squared_error(y_test, y_pred_lstat)
+rmse = np.sqrt(mse)
+r2 = lin_reg.score(X_test_lstat, y_test)
+# r2_score(y_test, y_pred_lstat)
+print(f'Price ~ LSTATL: RMSE = {rmse}, R^2 = {r2}')
+
+# Price ~ LSTAT + LSTAT^2 선형 회귀
+# price = b0 + b1 * lstat + b2 * lstat^2
+poly = PolynomialFeatures(degree=2, include_bias=False)
+# 데이터에 다항식 항들을 컬럼으로 추가해 주는 클래스 객체
+# 학습 세트에 다항식 항을 추가 -> fit/train할 때 사용
+X_train_lstat_poly = poly.fit_transform(X_train_lstat)
+# 검증 세트에 다항식 항을 추가 -> predict/test할 때 사용
+X_test_lstat_poly = poly.fit_transform(X_test_lstat)
+
+lin_reg.fit(X_train_lstat_poly, y_train)    # fit/train
+print(f'intercept: {lin_reg.intercept_}, coefficients: {lin_reg.coef_}')
+
+y_pred_lstat_poly = lin_reg.predict(X_test_lstat_poly)  # predict/test
+
+plt.scatter(X_test_lstat, y_test)   # 실제값
+xs = np.linspace(X_test_lstat.min(), X_test_lstat.max(), 100).reshape((100, 1))
+xs_poly = poly.fit_transform(xs)
+ys = lin_reg.predict(xs_poly)
+plt.plot(xs, ys, 'r')
+# plt.plot(X_test_lstat, y_pred_lstat_poly, 'r')   # 예측값
+plt.title('Price ~ Istat + Istat^2')
+plt.show()
+
+mse = mean_squared_error(y_test, y_pred_lstat_poly) # 오차 제곱 평균
+rmse = np.sqrt(mse)
+r2 = r2_score(y_test, y_pred_lstat_poly) # 결정 계수
+# lin_reg.score(X_test_lstat_poly, y_test)
+print(f'Price ~ LSTAT^2: RMSE = {rmse}, R^2 = {r2}')
+
+# Price ~ RM + LSTAT 선형 회귀: price = b0 + b1 * rm + b2 * lstat
+# 3차원 그래프(그리지 않음)
+X_train_rm_lstat = X_train[:, [5, 12]]
+X_test_rm_lstat = X_test[:, [5, 12]]
+print(X_train_rm_lstat[:5])
+
+lin_reg.fit(X_train_rm_lstat, y_train)  # fit/train
+print(f'intercept: {lin_reg.intercept_}, coefficients: {lin_reg.coef_}')
+
+y_pred_rm_lstat = lin_reg.predict(X_test_rm_lstat)  # predict/test
+print('y true', y_test[:5])
+print('y pred', y_pred_rm_lstat[:5])
+
+mse = mean_squared_error(y_test, y_pred_rm_lstat)
+rmse = np.sqrt(mse)
+r2 = r2_score(y_test, y_pred_rm_lstat)
+print(f'Price ~ RM + LSTAT: RMSE = {rmse}, R^2 = {r2}')
+
+# Price ~ RM + LSTAT + RM^2 + RM*LSTAT + LSTAT^2
+# price = b0 + b1*rm + b2*lstat + b3*rm^2 + b4*rm*lstat + b5*lstat^2
+# 학습 세트에 다항식항(컬럼)을 추가
+X_train_rm_lstat_poly = poly.fit_transform(X_train_rm_lstat)
+# 테스트 세트에 다항식항(컬럼)을 추가
+X_test_rm_lstat_poly = poly.fit_transform(X_test_rm_lstat)
+
+lin_reg.fit(X_train_rm_lstat_poly, y_train)
+print(f'intercept: {lin_reg.intercept_}, coefficients: {lin_reg.coef_}')
+
+y_pred_rm_lstat_poly = lin_reg.predict(X_test_rm_lstat_poly)
+print('y true:', y_test[:5])
+print('y pred:', y_pred_rm_lstat_poly[:5].round(2))
+
+mse = mean_squared_error(y_test, y_pred_rm_lstat_poly)
+rmse = np.sqrt(mse)
+r2 = r2_score(y_test, y_pred_rm_lstat_poly)
+print(f'Price ~ RM + LSTAT + RM^2 + RM*LSTAT + LSTAT^2: RMSE = {rmse}, R^2 = {r2}')
+
+# Price ~ RM + LSTAT + LSTAT^2
+# price = b0 + b1*rm + b2*lstat + b3*lstat^2
+X_train_last = np.c_[X_train_rm, X_train_lstat_poly]
+X_test_last = np.c_[X_test_rm, X_test_lstat_poly]
+print('X_train_last.shape', X_train_last.shape)
+print(X_train_last[:2])
+print('X_test_last.shape', X_test_last.shape)
+print(X_test_last[:2])
+
+lin_reg.fit(X_train_last, y_train)  # fit/train
+print(f'Price ~ RM + LSTAT + LSTAT^2: intercept: {lin_reg.intercept_}, coef: {lin_reg.coef_}')
+
+y_pred_last = lin_reg.predict(X_test_last)
+print('y true:', y_test[:5])
+print('y pred:', y_pred_last[:5].round(2))
+
+mse = mean_squared_error(y_test, y_pred_last)
+rmse = np.sqrt(mse)
+r2 = r2_score(y_test, y_pred_last)
+print(f'Price ~ RM + LSTAT + LSTAT^2: RMSE = {rmse}, R^2 = {r2}')
