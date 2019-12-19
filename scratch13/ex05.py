@@ -10,7 +10,6 @@ from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import PolynomialFeatures
 
-
 # 보스턴 집값 데이터 세트 로딩
 dataset = load_boston() # Bunch: 파이썬의 dict와 비슷한 타입
 print(type(dataset))
