@@ -51,20 +51,6 @@ def main(people):
                     i += 1
 
 
-        # for link in enumerate(img_data[1:]):
-        #     print('link', link)
-        #     print('link[1]', link[1])
-        #     if 'src' in link[1]:  # 내부에 있는 항목들을 리스트로 가져옴
-        #         # t = link.attrs['src']
-        #         print('c', 'c')
-        #         t = link[1].attrs['src']
-        #         print('t', t)
-        #         # filename = "jihyun" + str(link[0] + 1) + '.jpg'
-        #         # with open(filename, "wb") as f:
-        #         #     f.write(t)
-        #         # print("Img Save Success")
-
-
 if __name__=="__main__":
     people = '전지현'
     main(people)
