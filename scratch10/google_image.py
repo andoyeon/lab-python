@@ -25,15 +25,23 @@ doc = parsed.getroot()
 # img 경로는 img 태그안에 src에 있음
 imgs = doc.findall('.//img')
 
+
 img_list = []   # 이미지 경로가 담길 list
 for a in imgs:
-    img_list.append(a.get('src'))
-    print(a.get('src'))
+    if 'http' in str(a.get('src')):
+        link = str(a.get('src'))
+        img_list.append(link)
+for i in range(len(img_list)):
+    filename = 'Gong_Yoo' + '_' + str(i) + '.jpg'
+    save_dir = os.path.join('..', 'dataset')
+    print(img_list[i])
+    t = urllib.request.urlopen(img_list[i]).read()
+    if not os.path.exists(save_dir):
+        os.mkdir(save_dir)
+    else:
+        save_img = os.path.join(save_dir, filename)
+        with open(save_img, "wb") as f:
+            f.write(t)
+        print("Img Save Success")
 
-print(img_list)
-
-for url in img_list:
-    name = 'test'
-    fullname = name + '.jpg'
-    urllib.request.urlretrieve(url, fullname)
 

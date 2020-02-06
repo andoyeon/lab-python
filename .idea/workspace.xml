@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c614b50-4f58-4a45-a0e8-a655b6b7428b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scratch10/google_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scratch10/google_image2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scratch10/test" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scratch10/google_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/scratch10/google_image.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,22 +40,22 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab-dl" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\dev\lab-python\scratch12" />
-      <recent name="C:\dev\lab-python\scratch11" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\dev\lab-python\Project" />
       <recent name="C:\dev\lab-python\scratch12" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dev\lab-python\scratch12" />
+      <recent name="C:\dev\lab-python\scratch11" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.google_image">
-    <configuration name="ex02 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="crawler_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="lab-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -61,32 +63,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch15" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch15/ex02.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ex03 (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="lab-python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch15" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch15/ex03.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/crawler_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -158,13 +139,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="google_image2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="lab-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch10" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch10/google_image2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.google_image" />
+        <item itemvalue="Python.google_image2" />
+        <item itemvalue="Python.crawler_test" />
         <item itemvalue="Python.ex13" />
         <item itemvalue="Python.ex03" />
-        <item itemvalue="Python.ex03 (2)" />
-        <item itemvalue="Python.ex02 (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -210,6 +212,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1119" y="384" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580969760800">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="1119" y="384" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1160@0.0.1920.1160" timestamp="1580969760800" />
     <state x="498" y="220" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1576722201412">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -218,30 +224,34 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="1115" y="481" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1575424015199" />
-    <state width="1349" height="534" key="GridCell.Tab.0.bottom" timestamp="1580897255109">
+    <state x="740" y="335" key="FileChooserDialogImpl" timestamp="1580949736343">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1349" height="534" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1580897255109" />
-    <state width="1349" height="534" key="GridCell.Tab.0.center" timestamp="1580897255109">
+    <state x="740" y="335" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1580949736343" />
+    <state width="1883" height="248" key="GridCell.Tab.0.bottom" timestamp="1580970781125">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1349" height="534" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1580897255109" />
-    <state width="1349" height="534" key="GridCell.Tab.0.left" timestamp="1580897255109">
+    <state width="1883" height="248" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1580970781125" />
+    <state width="1883" height="248" key="GridCell.Tab.0.center" timestamp="1580970781125">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1349" height="534" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1580897255109" />
-    <state width="1349" height="534" key="GridCell.Tab.0.right" timestamp="1580897255109">
+    <state width="1883" height="248" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1580970781125" />
+    <state width="1883" height="248" key="GridCell.Tab.0.left" timestamp="1580970781125">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1349" height="534" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1580897255109" />
+    <state width="1883" height="248" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1580970781125" />
+    <state width="1883" height="248" key="GridCell.Tab.0.right" timestamp="1580970781125">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1883" height="248" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1580970781125" />
     <state x="233" y="160" key="SettingsEditor" timestamp="1575880393893">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="233" y="160" key="SettingsEditor/0.0.1920.1160@0.0.1920.1160" timestamp="1575880393893" />
-    <state width="538" height="501" key="javadoc.popup.new" timestamp="1580887943491">
+    <state width="538" height="501" key="javadoc.popup.new" timestamp="1580968543213">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="538" height="501" key="javadoc.popup.new/0.0.1920.1160@0.0.1920.1160" timestamp="1580887943491" />
+    <state width="538" height="501" key="javadoc.popup.new/0.0.1920.1160@0.0.1920.1160" timestamp="1580968543213" />
     <state x="233" y="260" width="672" height="678" key="search.everywhere.popup" timestamp="1576739264059">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
