@@ -10,9 +10,9 @@ def user_input():
     while True:
         try:
             try:
-                n = int(input('1, 2, 3 중 숫자 하나를 입력>>'))
+                n = int(input('1, 2, 3 중에 숫자 하나를 입력>>'))
             except ValueError:
-                raise ValueError('문자 입력 안됨')
+                raise ValueError('문자는 입력하면 안되요~')
             if n in (1, 2, 3):
                 return n  # break
             else:
@@ -24,5 +24,4 @@ def user_input():
 
 user = user_input()
 print('입력 값 =', user)
-
 

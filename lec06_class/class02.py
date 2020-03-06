@@ -5,7 +5,7 @@
 class Score:
     # 생성자를 호출했을 때 필드들을 초기화하는 함수
     def __init__(self, korean, english, math):
-        self.korean = korean    # self.korean - field
+        self.korean = korean  # field
         self.english = english
         self.math = math
 

@@ -4,17 +4,16 @@ class Rectangle:
         self.width = width
         self.height = height
 
-
     def info(self):
         print(f'Rectangle(w={self.width}, h={self.height})')
-
 
     def area(self):
         return self.width * self.height
 
     # == 연산자를 사용했을 때 자동으로 호출되는 메소드
     def __eq__(self, other):
-        return self.width == other.width and self.height == other.height
+        return self.width == other.width and \
+                self.height == other.height
 
     # 객체의 내용을 print할 때 자동으로 호출되는 메소드
     def __str__(self):
@@ -29,13 +28,13 @@ if __name__ == '__main__':
     print(id(rect1))
     rect1.info()
 
-    rect2 = Rectangle(1)    # height만 default argument가 사용됨
+    rect2 = Rectangle(1)  # height만 default argument가 사용됨
     rect2.info()
 
-    rect3 = Rectangle(height=2)   # keyword argument를 사용한 호출
+    rect3 = Rectangle(height=2)  # keyword argument를 사용한 호출
     rect3.info()
 
-    rect4 = Rectangle(2, 3)     # positional argument를 사용한 호출
+    rect4 = Rectangle(2, 3)  # positional argument를 사용한 호출
     rect4.info()
     print('rect4 넓이:', rect4.area())
     print(id(rect4))
@@ -45,11 +44,10 @@ if __name__ == '__main__':
     print('rect5 넓이:', rect5.area())
     print(id(rect5))
 
-    # 숫자나 문자를 제외한 클래스는 생성할 때마다 다른 객체를 만들어 냄(주소값이 다름)
     print(rect4 == rect5)
     # obj1 == obj2 비교하는 방법(== 연산자의 동작 방식):
     # obj1.__eq__(obj2)
-    # == 연산자는 클래스의 __ep__ 메소드를 호출
+    # == 연산자는 클래스의 __eq__ 메소드를 호출
     # 개발자가 클래스를 정의할 때 __eq__ 메소드를 정의하지 않아도
     # 모든 클래스는 __eq__ 메소드를 가지고 있음
     # 기본 __eq__ 메소드는 개체들의 주소값(id)를 비교함

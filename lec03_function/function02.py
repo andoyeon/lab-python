@@ -10,18 +10,20 @@ def 함수이름(파라미터 선언, ...):
 def say_hello():
     """
     '안녕하세요'를 출력하는 함수
+
     :return: None
     """
     print('안녕하세요')
 
 
 # 함수는 호출해야만 실행됨
-say_hello()     # 함수 호출(call, invoke)
+say_hello()  # 함수 호출(call, invoke)
 
 
 def print_msg(msg):
     """
     인수(argument) msg를 화면에 출력하는 함수
+
     :param msg: 출력할 메시지(str 타입)
     :return: None
     """
@@ -57,14 +59,11 @@ def sum_and_product(x, y):
     return x + y, x * y
 
 
-
-
 sum, product = sum_and_product(11, 22)
 print(f'sum = {sum}, product = {product}')
 
 result = sum_and_product(11, 22)
 print(result, result[0], result[1])
-
 
 
 def make_person(name, age):
@@ -73,11 +72,10 @@ def make_person(name, age):
 
     :param name: 이름(str)
     :param age: 나이(int)
-    :return: {'name': 이름, 'age': age}
+    :return: {'name': name, 'age': age}
     """
     return {'name': name, 'age': age}
 
 
 person = make_person('오쌤', 16)
 print(person)
-

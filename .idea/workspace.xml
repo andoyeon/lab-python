@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c614b50-4f58-4a45-a0e8-a655b6b7428b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scratch10/google_image2.py" beforeDir="false" afterPath="$PROJECT_DIR$/scratch10/google_image2.py" afterDir="false" />
-    </list>
+    <list default="true" id="faaed51c-7924-4c11-8239-e198b9693f25" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="lab-python" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -21,39 +15,40 @@
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectId" id="1T8egdtipvwvLuGkYihzxWe7TZ1" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1T8efnsKnhyqPfeGFJKxzmptKQ1" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab-dl" />
-    <property name="restartRequiresConfirmation" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="lab-python" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="lab-python" />
+      </console-settings>
+    </option>
+  </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\dev\lab-python\Project" />
-      <recent name="C:\dev\lab-python\scratch12" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\dev\lab-python\scratch12" />
       <recent name="C:\dev\lab-python\scratch11" />
+      <recent name="C:\dev\lab-python\scratch10" />
+      <recent name="C:\dev\lab-python\scratch09" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\dev\lab-python\scratch15" />
+      <recent name="C:\dev\lab-python\scratch12" />
+      <recent name="C:\dev\lab-python\scratch05" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.google_image">
-    <configuration name="crawler_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.ex13">
+    <configuration name="ex01 (1)" type="PythonConfigurationType" factoryName="Python">
       <module name="lab-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -61,11 +56,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch04" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/crawler_test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch04/ex01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -74,7 +69,70 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ex03" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ex02 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="lab-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\dev\lab-python\scratch15\ex02.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ex02 (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="lab-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch15" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch15/ex02.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ex03 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="lab-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch15" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch15/ex03.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ex04" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lab-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -86,7 +144,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch14/ex03.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch14/ex04.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -116,55 +174,21 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="google_image" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="lab-python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch10" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch10/google_image.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="google_image2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="lab-python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch10" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch10/google_image2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Python.ex01 (1)" />
+      <item itemvalue="Python.ex02 (1)" />
+      <item itemvalue="Python.ex02 (2)" />
+      <item itemvalue="Python.ex03 (1)" />
+      <item itemvalue="Python.ex04" />
+      <item itemvalue="Python.ex13" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.google_image" />
-        <item itemvalue="Python.google_image2" />
-        <item itemvalue="Python.crawler_test" />
         <item itemvalue="Python.ex13" />
-        <item itemvalue="Python.ex03" />
+        <item itemvalue="Python.ex03 (1)" />
+        <item itemvalue="Python.ex02 (2)" />
+        <item itemvalue="Python.ex02 (1)" />
+        <item itemvalue="Python.ex04" />
       </list>
     </recent_temporary>
   </component>
@@ -185,74 +209,66 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6c614b50-4f58-4a45-a0e8-a655b6b7428b" name="Default Changelist" comment="" />
-      <created>1572846261656</created>
+      <changelist id="faaed51c-7924-4c11-8239-e198b9693f25" name="Default Changelist" comment="" />
+      <created>1572846256098</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1572846261656</updated>
+      <updated>1572846256098</updated>
     </task>
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="1119" y="384" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580969760800">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state width="1899" height="340" key="GridCell.Tab.0.bottom" timestamp="1580894029358">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1119" y="384" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1160@0.0.1920.1160" timestamp="1580969760800" />
-    <state x="498" y="220" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1576722201412">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state width="1899" height="305" key="GridCell.Tab.0.bottom.inPresentationMode" timestamp="1576828160582">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="498" y="220" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1576722201412" />
-    <state x="1115" y="481" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1575424015199">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state width="1899" height="305" key="GridCell.Tab.0.bottom.inPresentationMode/0.0.1920.1040@0.0.1920.1040" timestamp="1576828160582" />
+    <state width="1899" height="340" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580894029358" />
+    <state width="1899" height="340" key="GridCell.Tab.0.center" timestamp="1580894029357">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1115" y="481" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1575424015199" />
-    <state x="740" y="335" key="FileChooserDialogImpl" timestamp="1580988265917">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state width="1899" height="305" key="GridCell.Tab.0.center.inPresentationMode" timestamp="1576828160582">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="335" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1580988265917" />
-    <state width="1883" height="248" key="GridCell.Tab.0.bottom" timestamp="1580988695757">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state width="1899" height="305" key="GridCell.Tab.0.center.inPresentationMode/0.0.1920.1040@0.0.1920.1040" timestamp="1576828160582" />
+    <state width="1899" height="340" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580894029357" />
+    <state width="1899" height="340" key="GridCell.Tab.0.left" timestamp="1580894029357">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1883" height="248" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1580988695757" />
-    <state width="1883" height="248" key="GridCell.Tab.0.center" timestamp="1580988695757">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state width="1899" height="305" key="GridCell.Tab.0.left.inPresentationMode" timestamp="1576828160582">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1883" height="248" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1580988695757" />
-    <state width="1883" height="248" key="GridCell.Tab.0.left" timestamp="1580988695757">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state width="1899" height="305" key="GridCell.Tab.0.left.inPresentationMode/0.0.1920.1040@0.0.1920.1040" timestamp="1576828160582" />
+    <state width="1899" height="340" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580894029357" />
+    <state width="1899" height="340" key="GridCell.Tab.0.right" timestamp="1580894029357">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1883" height="248" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1580988695757" />
-    <state width="1883" height="248" key="GridCell.Tab.0.right" timestamp="1580988695757">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state width="1899" height="305" key="GridCell.Tab.0.right.inPresentationMode" timestamp="1576828160582">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1883" height="248" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1580988695757" />
-    <state x="233" y="160" key="SettingsEditor" timestamp="1575880393893">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state width="1899" height="305" key="GridCell.Tab.0.right.inPresentationMode/0.0.1920.1040@0.0.1920.1040" timestamp="1576828160582" />
+    <state width="1899" height="340" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580894029357" />
+    <state x="463" y="164" key="SettingsEditor" timestamp="1577061660499">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="233" y="160" key="SettingsEditor/0.0.1920.1160@0.0.1920.1160" timestamp="1575880393893" />
-    <state width="538" height="501" key="javadoc.popup.new" timestamp="1580968543213">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state x="463" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1577061660499" />
+    <state x="601" y="116" width="718" height="807" key="find.popup" timestamp="1576456417209">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="538" height="501" key="javadoc.popup.new/0.0.1920.1160@0.0.1920.1160" timestamp="1580968543213" />
-    <state x="233" y="260" width="672" height="678" key="search.everywhere.popup" timestamp="1576739264059">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state x="0" y="0" width="1920" height="1040" key="find.popup.inPresentationMode" timestamp="1576468117524">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="233" y="260" width="672" height="678" key="search.everywhere.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1576739264059" />
+    <state x="0" y="0" width="1920" height="1040" key="find.popup.inPresentationMode/0.0.1920.1040@0.0.1920.1040" timestamp="1576468117524" />
+    <state x="601" y="116" width="718" height="807" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1576456417209" />
+    <state width="1832" height="465" key="javadoc.popup.new.inPresentationMode" timestamp="1576826183692">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1832" height="465" key="javadoc.popup.new.inPresentationMode/0.0.1920.1040@0.0.1920.1040" timestamp="1576826183692" />
+    <state x="0" y="-4" width="3569" height="9912" key="search.everywhere.popup.inPresentationMode" timestamp="1576215639066">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="-4" width="3569" height="9912" key="search.everywhere.popup.inPresentationMode/0.0.1920.1040@0.0.1920.1040" timestamp="1576215639066" />
   </component>
 </project>

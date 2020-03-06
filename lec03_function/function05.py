@@ -1,6 +1,6 @@
 """
 가변 길이 인수(variable-length argument):
-함수를 호출할 때 전달하는 argument의 갯수가 다양하게 변하는 것
+함수를 호출할 때 전달하는 argument의 갯수가 다양하게 변하는 것.
 파라미터 이름 앞에 *를 붙임.
 """
 print('a')
@@ -22,7 +22,7 @@ def summation(*args):
     """
     임의의 갯수의 숫자들을 전달받아서 그 숫자들의 총합을 리턴하는 함수
 
-    :param args: 합계를 계산할 숫자(갯수 제한 없음)
+    :param args: 합계를 계산할 숫자들(갯수 제한 없음)
     :return: 숫자들의 합
     """
     total = 0
@@ -32,7 +32,8 @@ def summation(*args):
 
 
 print(summation())
-print(summation(1, 2, 3, 4, 5))
+print(summation(1))
+print(summation(1, 3, 5, 7, 9))
 
 
 def fn_vararg2(a, *b):
@@ -40,15 +41,13 @@ def fn_vararg2(a, *b):
     print(f'b = {b}')
 
 
-# fn_vararg2()  # a 값을 전달하지 않으면 에러 발생
-fn_vararg2(1)   # b는 가변길이 파라미터이므로 인수를 전달하지 않아도 됨
-
+# fn_vararg2()  # a에 값을 전달하지 않으면 에러 발생
+fn_vararg2(1)  # b는 가변길이 파라미터이므로 인수를 전달하지 않아도 됨.
 
 
 def fn_varargs3(*a, b):
     print(f'a = {a}')
     print(f'b = {b}')
-
 
 
 # fn_varargs3()
@@ -69,22 +68,26 @@ def calculator(*values, operator):
     :param operator:
     :return:
     """
-    total = None
+    result = None
     if operator == '+':
-        total = 0
-        for val in values:
-            total += val    # total = total + val
-        # return total
+        result = 0
+        for x in values:
+            result += x  # result = result + x
+        # return result
     elif operator == '*':
-        total = 1
-        for val in values:
-            total *= val    # total = total * val
-        # return total
-    return total
+        result = 1
+        for x in values:
+            result *= x  # result = result * x
+        # return result
+
+    return result
 
 
-print(calculator(10, 20, 30, operator = '+'))
-print(calculator(10, 20, 30, operator = '*'))
-print(calculator(10, 20, 30, operator = '-'))
+result = calculator(1, 2, 3, 4, 5, operator='+')
+print(result)
+result = calculator(1, 2, 3, 4, 5, operator='*')
+print(result)
+result = calculator(1, 2, 3, 4, 5, operator='-')
+print(result)
 
 

@@ -10,7 +10,7 @@ print('Hello, Python!')
 age = 16
 print(age)
 
-# 파이썬의 문자열: 작은따옴표(''), 큰따옴표("") 사용
+# 파이썬의 문자열: 작은따옴표('') 또는 큰따옴표("") 사용
 name = '오쌤'
 print(name)
 
@@ -23,4 +23,3 @@ str2 = "I'm a boy."
 print(str2)
 str3 = 'I\'m a girl.'
 print(str3)
-

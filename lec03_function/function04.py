@@ -5,7 +5,7 @@ def test(x, y):
 
 
 # 함수 호출
-# test()    # 실행 중에 TypeError 발생
+# test()  # 실행 중에 TypeError 발생
 # 파이썬은 함수의 파라미터 타입은 검사하지 않지만,
 # 파라미터 갯수는 검사함.
 # positional argument: 함수를 호출할 때 전달하는 값(argument)들이
@@ -35,8 +35,8 @@ show_msg()
 
 
 # default argument를 갖는 파라미터는 반드시
-# # default argument를 갖지 않는 파라미터들이 선언된 뒤에
-# # 선언해야 함
-# # def test2(x=1, y):
-# #     return x + y
+# default argument를 갖지 않는 파라미터들이 선언된 뒤에
+# 선언해야 함
+# def test2(x = 1, y):
+#     return x + y
 

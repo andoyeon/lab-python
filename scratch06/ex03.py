@@ -24,8 +24,8 @@ import random
 kid = ('boy', 'girl')
 trials = 10_000
 older_girl = 0  # 첫째가 딸인 경우
-both_girl = 0   # 두 자녀 모두 딸인 경우
-either_girl = 0 # 두 자녀 중 적어도 한 명이 딸인 경우
+both_girl = 0  # 두 자녀 모두 딸인 경우
+either_girl = 0  # 두 자녀 중 적어도 한 명이 딸인 경우
 for _ in range(trials):
     older = random.choice(kid)
     younger = random.choice(kid)
@@ -42,5 +42,4 @@ print('P(첫째가 딸일 때, 두 자녀 모두 딸) =', p1)
 
 # 적어도 한 명이 딸일 때, 두 자녀 모두 딸일 확률
 p2 = both_girl / either_girl
-print('P(적어도 한 명이 딸일 때, 두 자녀 모두 딸) =', p2)
-
+print('P(적어도 한명이 딸일 때, 두 자녀 모두 딸) =', p2)

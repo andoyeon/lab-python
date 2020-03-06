@@ -8,8 +8,8 @@ list: 여러개의 값들을 하나의 변수에 저장하기 위한 데이터 �
 numbers = [1, 2, 3, 4, 5]
 print(numbers)
 print(numbers[0])
-# print(numbers[5])     # 리스트의 마지막 인덱스 = 리스트 길이 - 1
-print(numbers[0:3])     # 범위 연산자를 사용한 slicing
+# print(numbers[5])  # 리스트의 마지막 인덱스 = 리스트 길이 - 1
+print(numbers[0:3])  # 범위 연산자를 사용한 slicing
 
 # 배열에 저장된 값(원소)을 변경
 numbers[0] = 100
@@ -22,15 +22,15 @@ print(numbers)
 numbers.extend([7, 8, 9])
 print(numbers)
 
-# append와 extend 비교
+# append와 exptend 비교
 numbers.append([7, 8, 9])
 print(numbers)
 
 # 원소 삭제
-numbers.remove(100)     # 원소의 값으로 삭제
+numbers.remove(100)  # 원소의 값으로 삭제
 print(numbers)
 
-del numbers[1]      # 인덱스를 사용해서 원소 삭제
+del numbers[1]  # 인덱스를 사용해서 원소 삭제
 print(numbers)
 
 empty = []  # 원소가 없는 빈 리스트

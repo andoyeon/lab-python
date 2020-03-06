@@ -1,6 +1,3 @@
-import csv
-
-
 """
 file.readline() 사용해서 csv 파일 읽기
 """
@@ -10,7 +7,7 @@ import os
 def my_csv_reader(fn: str, header=True, encoding='utf-8') -> list:
     """
     csv 파일의 데이터를 2차원 행렬 형태로 리턴
-
+    
     :param fn: 읽을 csv 파일 이름(예: data\\exam.csv)
     :param header: csv 파일의 헤더 존재 여부
     :param encoding: 파일 인코딩

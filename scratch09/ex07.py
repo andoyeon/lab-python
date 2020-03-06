@@ -1,8 +1,7 @@
 """
-ex07.py
 pandas 데이터 타입
 Series: 1차원 리스트. 인덱스는 한 개만 갖음.
-DataFrame: 2차원 리스트. 인덱스가 행과 열 두개를 갖음.
+DataFrame: 2차원 리스트. 인덱스가 행과 열 두 개를 갖음.
 """
 import numpy as np
 import pandas as pd
@@ -11,13 +10,13 @@ a = pd.Series([1, 3, 5, np.nan, 6, 8])
 print(type(a))  # Series
 print(a)
 # Series에서 특정 인덱스의 아이템 선택: Series[index]
-print(a[0]) # a[0]의 데이터 타입: float64
+print(a[0])  # a[0]의 데이터 타입: float64
 
 # 인덱스 연산자([]) 안에서 범위 연산자(:)를 사용할 수도 있음
-print(a[0:3])   # a[0:3]의 데이터 타입: Series
+print(a[0:3])  # a[0:3]의 데이터 타입: Series
 
-# 인덱스 연산자([]) 안에서 리스트 연산자([])를  사용할 수도 있음
-print(a[[0, 2, 4]]) # a[[0, 2, 4]] 데이터 타입: Series
+# 인덱스 연산자([]) 안에서 리스트 연산자([])를 사용할 수도 있음
+print(a[[0, 2, 4]])  # a[[0, 2, 4]] 데이터 타입: Series
 
 # dict 타입({key: value, ...})의 데이터에서 DataFrame 생성
 df = pd.DataFrame({
@@ -38,19 +37,19 @@ print(students)
 
 # DataFrame.iloc[row_index, column_index]
 print(students.iloc[0, 0])  # 0번 row, 0번 column의 아이템
-print(students.iloc[0, 0:3])    # 0번 row, 0, 1, 2 column에 있는 아이템
+print(students.iloc[0, 0:3])  # 0번  row, 0, 1, 2 column에 있는 아이템
 print(type(students.iloc[0, 0:3]))  # Series
 print(students.iloc[0:2, 0:2])
 print(type(students.iloc[0:2, 0:2]))  # DataFrame
-print(students.iloc[:, 1:3])    # 범위 연산자만 사용하면 모든 행 또는 열    # 일련번호 제거할 때 사용
-print(students.iloc[1:3, :])    # Train/Test set 구분할 때 사용
-print(students.iloc[1:3])   # 모든 컬럼을 선택할 때는 컬럼 인덱스를 생략 가능.
+print(students.iloc[:, 1:3])  # 범위 연산자만 사용하면 모든 행 또는 열
+print(students.iloc[1:3, :])
+print(students.iloc[1:3])  # 모든 컬럼을 선택할 때는 컬럼 인덱스를 생략 가능.
 
 # boolean indexing
-# DataFrame[[boolean들의 리스트]]: 리스트에서 True이 값의 인덱스를 행 인덱스로 선택.
+# DataFrame[[boolean들의 리스트]]: 리스트에서 True인 값의 인덱스를 행 인덱스로 선택
 print(students[[False, True, False]])
 condition = (students['성별'] == 'M')
-print(condition)    # [True, True, False]
+print(condition)  # [True, True, False]
 print(students[condition])
 print(students[students['성별'] == 'F'])
 
@@ -69,11 +68,13 @@ print(stu_df2.sort_values('no'))
 print(stu_df2.sort_values('gender'))
 
 # 두 개 이상의 조건으로 boolean indexing
-cond1 = stu_df2['no'] % 2 == 1    # no 컬럼의 값이 홀수이면
-print(cond1)    # [T, T, T, F, F, F]
-cond2 = stu_df2['gender'] == 'F'    # gender 컬럼의 값이 'F'이면
-print(cond2)    # [F, T, T, F, F, T]
+cond1 = stu_df2['no'] % 2 == 1  # no 컬럼의 값이 홀수이면
+# [T, T, T, F, F, F]
+cond2 = stu_df2['gender'] == 'F'  # gender 컬럼의 값이 'F'이면
+# [F, T, T, F, F, T]
 subset = stu_df2[cond1 & cond2]
+# stu_df2[(stu_df2['no'] % 2 == 1) & (stu_df2['gender'] == 'F')]
 # boolean 인덱싱에서는 and, or 연산자는 사용할 수 없고,
 # 각 성분별로 연산을 하는 (bitwise 연산자) &, |를 사용해야 함!
 print(subset)
+

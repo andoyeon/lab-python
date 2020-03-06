@@ -1,6 +1,3 @@
-"""
-ex04.py
-"""
 import numpy as np
 
 # numpy.c_ (column bind)와 numpy_r (row bind)의 비교

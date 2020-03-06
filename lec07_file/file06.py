@@ -4,8 +4,8 @@ file.write 메소드를 사용한 csv 파일 작성
 import os
 import numpy as np
 
-# 현재 폴더에 data 폴더를 생성
 try:
+    # 현재 폴더에 data 폴더를 생성
     os.mkdir('data')
 except FileExistsError:
     # 현재 폴더에 data 폴더가 있으면 아무일도 하지 않음

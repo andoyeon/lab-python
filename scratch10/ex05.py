@@ -1,6 +1,3 @@
-"""
-ex05.py
-"""
 import numpy as np
 import pandas as pd
 
@@ -13,19 +10,18 @@ def doubles(x):
     return x * 2
 
 
-
 if __name__ == '__main__':
     result1, result2 = squares(3), doubles(3)
     print(result1, result2)
 
     array = np.array([1, 2, 3])
     print('array =', array)
-    result1 = squares(array)    # array ** 2
-    result2 = doubles(array)    # array * 2
+    result1 = squares(array)  # array ** 2
+    result2 = doubles(array)  # array * 2
     print('squares =', result1)
     print('doubles =', result2)
 
-    # numbers =[[1, 4], [2, 5], [3, 6]]
+    # numbers = [[1, 4], [2, 5], [3, 6]]
     # squares(numbers)
 
     df = pd.DataFrame({
@@ -51,9 +47,7 @@ if __name__ == '__main__':
     # agg(aggregate) 함수는 집계 함수들만 사용 가능
     # apply는 집계 함수 이외의 함수들도 사용 가능
     emp = pd.read_csv('emp_df.csv')
-    print(emp.agg(np.mean)) # 집계 함수는 숫자 타입의 컬럼만 자동으로 선택
+    print(emp.agg(np.mean))  # 집계 함수는 숫자 타입의 컬럼만 자동으로 선택
     # emp.apply(np.mean)
     # apply 함수는 모든 컬럼 또는 행을 함수의 파라미터에 전달하기 때문에,
     # 집계 함수(mean, sum, ...)가 제대로 동작하지 않을 수도 있음.
-
-

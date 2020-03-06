@@ -1,5 +1,4 @@
 """
-ex13.py
 icrawler 패키지를 사용해서, Google 이미지 검색 결과의 이미지들을 다운로드
 > pip install icrawler
 """
@@ -10,7 +9,10 @@ from icrawler.builtin import GoogleImageCrawler
 save_dir = os.path.join('C:' + os.sep, 'dev', 'images')
 
 # GoogleImageCrawler 객체 생성
-google_crawler = GoogleImageCrawler(storage={'root_dir': save_dir})
+google_crawler = GoogleImageCrawler(feeder_threads=1,
+                                    parser_threads=2,
+                                    downloader_threads=4,
+                                    storage={'root_dir': save_dir})
 
 # 검색 필터링(filter) 조건들
 filters = {
@@ -20,6 +22,4 @@ filters = {
 }
 
 # 이미지 다운로드
-google_crawler.crawl(keyword='cat', filters=filters, max_num=50)
-
-
+google_crawler.crawl(keyword='dog', filters=filters, max_num=20)

@@ -11,30 +11,27 @@ def twice(x):
     return 2 * x
 
 
-result = twice(100) # 함수 호출 -> 함수의 리턴값 저장
-print(result)   # 리턴 값을 출력
+result = twice(100)  # 함수 호출 -> 함수의 리턴 값을 변수에 저장
+print(result)  # 리턴 값을 출력
 
-double = twice  # 함수(자체)를 변수에 저장
+double = twice  # 함수를 변수에 저장
 print(double)
-result = double(11) # 함수 호출
+result = double(11)  # 함수 호출
 print(result)
 
 
 def plus(x, y):
     return x + y
 
-
 def minus(x, y):
     return x - y
-
 
 def calculate(x, y, operator):
     return operator(x, y)
 
-
-result = calculate(1, 2, plus)  # operator(1, 2) = plus(1, 2)
+result = calculate(1, 2, plus)
 print(result)
-result = calculate(1, 2, minus)  # operator(1, 2) = minus(1, 2)
+result = calculate(1, 2, minus)
 print(result)
 
 
@@ -48,5 +45,5 @@ def decorate(func):
     return wrapper_function
 
 
-wrapper = decorate(print)
-wrapper('a', 'b', 'c')
+wrappeer = decorate(print)
+wrappeer('a', 'b', 'c')

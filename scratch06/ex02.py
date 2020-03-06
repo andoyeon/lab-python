@@ -18,53 +18,44 @@ P(A,B): 사건 A와 사건 B의 교집합이 일어날 확률
 
 P(A,B) = P(A) * P(B)이 성립하면, 두 사건은 독립 사건.
 """
-from collections import Counter
-
-from scratch06.ex01 import experiment
 
 # 자녀가 2명인 경우,
 # A: 첫째가 딸인 경우
 # B: 둘째가 아들인 경우
 # C: 둘 다 딸인 경우
 # A와 B가 독립 사건, A와 C는 종속 사건임을 증명
-# P(A), P(B), P(C), P(A, B), P(A, C)
+# P(A,B) == P(A) * P(B), P(A,C) != P(A) * P(C)
+import random
 
-child = [1, 0]   # 1: 딸, 0: 아들
-exp = experiment(child, 2, 10_000)
-counts = Counter(exp)
+child = ('boy', 'girl')
 trials = 10_000
 
-num_of_counts = 0
-for ev, cnt in counts.items():
-    if ev[0] == 1: # 첫째가 딸인 경우
-        num_of_counts += cnt
-p_a = num_of_counts / trials
-print('P(A) =', p_a)
+event_a = 0
+event_b = 0
+event_a_b = 0
+event_c = 0
+event_a_c = 0
+for _ in range(trials):
+    first = random.choice(child)
+    second = random.choice(child)
+    if first == 'girl':
+        event_a += 1
+    if second == 'boy':
+        event_b += 1
+    if first == 'girl' and second == 'boy':
+        # 사건 A와 사건 B의 교집합
+        event_a_b += 1
+    if first == 'girl' and second == 'girl':
+        event_c += 1
+    if first == 'girl' and (first == 'girl' and second == 'girl'):
+        # 사건 A와 사건 C의 교집합
+        event_a_c += 1
 
-num_of_counts = 0
-for ev, cnt in counts.items():
-    if ev[1] == 0: # 둘째가 아들인 경우
-        num_of_counts += cnt
-p_b = num_of_counts / trials
-print('P(B) =', p_b)
+p_a = event_a / trials
+p_b = event_b / trials
+p_a_b = event_a_b / trials
+p_c = event_c / trials
+p_a_c = event_a_c / trials
 
-num_of_counts = 0
-for ev, cnt in counts.items():
-    if ev[0] == 1 and ev[1] == 1: # 둘 다 딸인 경우
-        num_of_counts += cnt
-p_c = num_of_counts / trials
-print('P(C) =', p_c)
-
-num_of_counts = 0
-for ev, cnt in counts.items():
-    if ev[0] == 1 and ev[1] == 0:
-        num_of_counts = cnt
-p_ab = num_of_counts / trials
-print('P(A, B) =', p_ab, 'P(A)P(B) =', p_a * p_b)
-
-num_of_counts = 0
-for ev, cnt in counts.items():
-    if ev[0] == 1 and (ev[0] == 1 and ev[1] == 0):
-        num_of_counts = cnt
-p_ac = num_of_counts / trials
-print('P(A, C) =', p_ac, 'P(A)P(C) =', p_a * p_c)
+print(f'P(A,B) = {p_a_b}, P(A)P(B) = {p_a * p_b}')
+print(f'P(A,C) = {p_a_c}, P(A)P(C) = {p_a * p_c}')

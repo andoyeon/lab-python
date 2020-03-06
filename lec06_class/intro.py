@@ -14,5 +14,3 @@ print(s2.capitalize())
 print(s2.upper())
 print(s2.find('l'))
 
-# s와 s2는 클래스는 같지만 다른 객체다
-

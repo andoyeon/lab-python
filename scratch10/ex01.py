@@ -1,10 +1,8 @@
 """
-ex01.py
 pandas groupby, aggregate, apply
 """
-import pandas as pd
 import numpy as np
-# Ctrl+Q 2번: 함수 설명창
+import pandas as pd
 
 # 데이터 프레임 생성
 df = pd.DataFrame({
@@ -16,10 +14,10 @@ df = pd.DataFrame({
 print(df)
 
 grouped1 = df.groupby('key1')
-print(grouped1) # DataFrameGroupBy 객체 - 그룹 연산을 적용하기 위해 만든 임시 객체
+print(grouped1)  # DataFrameGroupBy 객체 - 그룹 연산을 적용하기 위해 만든 객체
 # 그룹 연산: count, sum, mean, median, var, std, min, max, ...
 cnt = grouped1['data1'].count()
-print(type(cnt))    # Series
+print(type(cnt))  # Series
 print(cnt)
 print(cnt['a'], cnt['b'])
 
@@ -32,7 +30,7 @@ print(grouped2.mean())
 
 # groupby의 기준(by)이 2개 이상의 컬럼일 때는 리스트를 전달하면 됨.
 grouped3 = df.groupby(['key1', 'key2'])
-print(grouped3) # DataFrameGroupBy 객체
+print(grouped3)  # DataFrameGroupBy 객체
 print(grouped3['data1'].count())
 print(grouped3.count())
 print(grouped3.mean())

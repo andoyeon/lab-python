@@ -11,9 +11,11 @@ labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
 
 plt.scatter(friends, minutes)
 
-# 이름 붙이기
 for l, f, m in zip(labels, friends, minutes):
-    plt.annotate(l, xy=(f, m), xytext=(5, -5), textcoords='offset points')
+    plt.annotate(l,
+                 xy=(f, m),
+                 xytext=(5, -5),
+                 textcoords='offset points')
 
 plt.title('Minutes vs Friends')
 plt.xlabel('# of friends')
@@ -26,7 +28,7 @@ math = [99, 90, 85, 97, 80]
 science = [100, 85, 60, 90, 70]
 
 plt.scatter(math, science)
-plt.axis('equal')  
+plt.axis('equal')
 
 plt.title('Science vs Math')
 plt.xlabel('Math')

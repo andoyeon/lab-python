@@ -9,7 +9,7 @@ import lec08_database.oracle_config as cfg
 
 with cx_Oracle.connect(cfg.user, cfg.pwd, cfg.dsn) as connection:
     with connection.cursor() as cursor:
-        deptno = int(input('부서번호 입력>> '))
+        deptno = int(input('부서 번호 입력>> '))
         dname = input('부서 이름 입력>> ')
         loc = input('부서 위치 입력>> ')
 

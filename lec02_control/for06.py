@@ -5,7 +5,7 @@ dictionary comprehension
 numbers = [1, 2, 3, 4, 5]
 names = ['a', 'b', 'c', 'd', 'e']
 
-students = {}   # empty dict
+students = {}  # empty dict
 for i in range(len(numbers)):
     students[numbers[i]] = names[i]
 print(students)

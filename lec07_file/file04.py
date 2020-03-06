@@ -9,5 +9,3 @@ line이 빈 문자열이면 for 루프 종료
 with open('test.txt', mode='r', encoding='utf-8') as f:
     for line in f:
         print(line.strip())
-
-

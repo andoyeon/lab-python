@@ -11,7 +11,7 @@ None: 값이 없음을 나타내는 데이터 타입
 
 intVal = 123
 print(type(intVal))
-print(id(intVal))   # 메모리 주소
+print(id(intVal))
 
 floatVal = 3.141592
 print(type(floatVal))
@@ -20,7 +20,7 @@ complexVal = 1 + 2j
 print(type(complexVal))
 print(1j ** 2)
 
-result = 10 > 2
+result = 10 < 2
 print(result)
 print(type(result))
 

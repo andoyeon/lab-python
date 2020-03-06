@@ -10,7 +10,7 @@ def partial_difference_quotient(f, v, i, h=0.001):
     """
     (f([x1, ..., xi + h, ..., xn]) - f([x1, ..., xi, ..., xn])) / h
 
-    :param f: f(vector) = float 함수
+    :param f: f(vector) = float인 함수
     :param v: 기울기(gradient)를 계산할 점의 위치 - 벡터(리스트)
     :param i: 기울기(gradient)를 계산할 성분의 인덱스 - 정수
     :param h: i번째 성분의 변화량
@@ -31,7 +31,7 @@ def estimate_gradient(f, v, h=0.001):
     [df/dx1, df/dx2, ..., df/dxi, ..., df/dxn]
 
     :param f: f(vector) = float 함수
-    :param v: 기울기를 구하려는 점의 좌표. [x1, ..., xn]
+    :param v: 기울기를 구하려는 점의 좌표. [x1, ...., xn]
     :param h: 증분(increment)
     :return: 모든 성분의 gradient들로 이루어진 벡터(리스트)
     """
@@ -55,31 +55,29 @@ def gradient_step(v, gradient, step=-0.1):
 
 
 if __name__ == '__main__':
-    # f([x1, x2]) = x1 ** 2 + x2 ** 2 의 최소값: (0,0)인지 확인
-    # g([x1, x2]) = (x1 - 1) ** 2 + (x2 + 1) ** 2 의 최소값: (1, -1)
+    # f([x1, x2]) = x1 ** 2 + x2 ** 2 의 최솟값: (0, 0)
+    # g([x1, x2]) = (x1 - 1) ** 2 + (x2 + 1) ** 2 의 최솟값: (1, -1)
     def f(v):
-        """ v = [x1, x2] 가정 """
+        """ v= [x1, x2] 가정 """
         return v[0] ** 2 + v[1] ** 2
-
 
     def g(v):
         return (v[0] - 1) ** 2 + (v[1] + 1) ** 2
-
 
     random.seed(1129)
     # 기울기를 계산할 최초의 (x1, y1) 좌표를 임의로 선택
     init_v = [random.randint(-10, 10), random.randint(-10, 10)]
     print('init_v =', init_v)
 
-    tolerance = 0.000001    # 반복문 을 종료할 임계값
+    tolerance = 0.000001  # 반복문을 종료할 임계값
 
     count = 0
-    while True: # 무한 반복문
+    while True:  # 무한 반복문
         count += 1
         # 선택한 좌표(x1, y1)에서 기울기 계산
         gradient = estimate_gradient(g, init_v)
         # 다음 좌표로 점을 이동시킴
-        next_v = gradient_step(init_v, gradient, step=-0.3)
+        next_v = gradient_step(init_v, gradient, step=-0.1)
         print(f'{count}: next_v = {next_v}')
         # 이동 전 위치와 이동 후 위치 사이의 거리를 계산
         if distance(init_v, next_v) < tolerance:
@@ -88,6 +86,7 @@ if __name__ == '__main__':
         else:
             # 이동시킨 위치에서 gradient를 다시 계산하기 위해서
             init_v = next_v
+
 
 
 

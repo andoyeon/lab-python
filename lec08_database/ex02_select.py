@@ -22,7 +22,7 @@ cursor = connection.cursor()
 cursor.execute('select * from emp')
 # while True:
 #     row = cursor.fetchone()
-#     if row is None:     # select 결과가 없음
+#     if row is None:  # select 결과가 없음
 #         break
 #     print(row)
 
@@ -35,5 +35,5 @@ while row:  # 읽은 행(row)의 데이터가 있는 동안에
 # cursor 객체 사용 후 리소스 반환
 cursor.close()
 
-# 데이터베이스 서버와 연결 종료
+# 데이터베이스 서버 연결 종료
 connection.close()

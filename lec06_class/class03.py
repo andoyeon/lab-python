@@ -3,6 +3,7 @@
 """
 class Employee:
     """
+    사원 정보와 급여 인상 메소드를 가지고 있는 클래스
     field: empno, ename, salary, deptno
     method: raise_salary(self, pct)
     """
@@ -12,8 +13,6 @@ class Employee:
         self.salary = salary
         self.deptno = deptno
 
-
-    # method
     def raise_salary(self, pct):
         """
         인상된 급여를 리턴
@@ -21,7 +20,7 @@ class Employee:
         :param pct: 급여 인상율(0.1 = 10%, 0.5 = 50%, ...)
         :return: 인상된 급여
         """
-        # self.salary = self.salary * (1 + pct)
+        # self.salary = (1 + pct) * self.salary
         self.salary *= (1 + pct)
         return self.salary
 
@@ -44,6 +43,7 @@ ohssam = Employee(1012, '오쌤', 500, 30)
 employees = [ohssam, gil_dong, scott]
 print(employees)
 
-print(sorted(employees, key=lambda x: x.empno)) # key(정렬 기준) x 직원 -> 사번
+print(sorted(employees, key=lambda x: x.empno))
 print(sorted(employees, key=lambda x: x.salary))
 print(sorted(employees, key=lambda x: x.ename))
+

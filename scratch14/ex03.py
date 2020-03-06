@@ -1,6 +1,3 @@
-"""
-ex03.py
-"""
 import math
 import matplotlib.pyplot as plt
 import numpy as np
@@ -48,7 +45,7 @@ def coefficient_sgd(dataset, learning_rate, epochs):
 
 if __name__ == '__main__':
     iris = load_iris()
-    print(iris.DESCR)
+    # print(iris.DESCR)
     X = iris.data  # iris['data']
     y = iris.target  # iris['target']
     features = iris.feature_names  # iris['feature_names']
@@ -60,12 +57,11 @@ if __name__ == '__main__':
     plt.show()
 
     # petal-length, petal-width가 class(품종)을 분류할 때 상관관계가 높아 보임.
-    X = X[:, 2:4]  # pl, pw만 선택    # column = 2, 3
+    X = X[:, 2:4]  # pl, pw만 선택
     print(X[:5])
 
     # setosa 5개, setosa가 아닌 품종 5개를 샘플링
     indices = [x for x in range(0, 100, 10)]
-    # print(indices)
     sample_data = np.c_[X[indices, :], y[indices]]
     print(sample_data)
 

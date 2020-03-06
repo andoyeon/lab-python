@@ -12,5 +12,5 @@ def test(**kargs):
 
 
 test()
-test(name='오쌤', age= 16)
-
+# test('오쌤', 16)
+test(name='오쌤', age=16)

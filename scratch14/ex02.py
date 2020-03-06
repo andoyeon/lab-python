@@ -1,6 +1,3 @@
-"""
-ex02.py
-"""
 import math
 import matplotlib.pyplot as plt
 import numpy as np
@@ -12,7 +9,7 @@ def odds(p):
 
 
 def log_odds(p):
-    """odds에 log를 취한 값"""
+    """odss에 log를 취한 값"""
     return math.log(odds(p))
 
 

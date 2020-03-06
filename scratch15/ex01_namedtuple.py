@@ -1,12 +1,8 @@
-"""
-ex01_namedtuple.py
-"""
 from collections import namedtuple
 from typing import NamedTuple
 
-# 번호, 이름, 수학점수, 과학점수, 컴퓨터점수
-
 student_1 = (1, '홍길동', 10, 20, 30)
+# 번호, 이름, 수학점수, 과학점수, 컴퓨터점수
 print('번호:', student_1[0])
 print('과학 점수:', student_1[3])
 
@@ -18,7 +14,7 @@ stu_dict = {'no': 2,
             'name': '김길동',
             'math': 90,
             'science': 50,
-            'cs': 100}
+            'computer': 100}
 
 # 튜플의 단점을 해결하기 위해서,
 # 튜플의 특징과 딕셔너리(dict)의 특징을 모두 갖는 NamedTuple 클래스가 만들어 짐.
@@ -26,10 +22,10 @@ Student = namedtuple('Student', ('no', 'name', 'math', 'science', 'cs'))
 student_2 = Student(3, '허균', 100, 100, 100)
 print(student_2)
 print(f'번호: {student_2[0]}, {student_2.no}')
-print(f'수학 점수: {student_2[2]}, {student_2.math}')
+print(f'수학 점수: {student_2[2]}, {student_2.cs}')
 
 # Python 3.6부터 NamedTuple을 class처럼 선언하는 방식이 만들어 짐.
-class Student_2(NamedTuple):  # Student2 클래스는 NamedTuple 클래스를 상속
+class Student2(NamedTuple):  # Student2 클래스는 NamedTuple 클래스를 상속
     # field 선언 - 변수 타입 annotation을 반드시 추가해야 함.
     no: int
     name: str
@@ -38,5 +34,5 @@ class Student_2(NamedTuple):  # Student2 클래스는 NamedTuple 클래스를 �
     cs: int
 
 
-student_3 = Student_2(4, 'abc', 90, 88, 77)
+student_3 = Student2(4, 'abc', 90, 88, 77)
 print(student_3)

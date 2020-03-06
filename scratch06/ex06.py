@@ -32,14 +32,14 @@ SQRT_TWO_PI = math.sqrt(2 * math.pi)
 
 def normal_pdf(x, mu=0.0, sigma=1.0):
     """평균이 mu이고, 표준편차가 sigma인
-    정규 분포(Normal Distribution) 확률 밀도 함수
+    정규 분포(Normal Distribution) 확률 밀도 함수.
     """
     return math.exp(-(x - mu)**2 / (2 * sigma**2)) / (SQRT_TWO_PI * sigma)
 
 
 def normal_cdf(x, mu=0.0, sigma=1.0):
     """ 평균이 mu이고, 표준편차가 sigma인
-    정규 분포의 누적 분포 함수(cumulative distribution function)
+    정규 분포의 누적 분포 함수(cumulative distribution function).
     math.erf() 함수(error function)를 이용해서 구현"""
     return (1 + math.erf((x - mu) / (math.sqrt(2) * sigma))) / 2
 
@@ -49,8 +49,8 @@ def inverse_normal_cdf(p, mu=0.0, sigma=1.0, tolerance=0.00001):
     # 표준 정규 분포가 아니라면 표준 정규 분포로 변환
     if mu != 0.0 or sigma != 1.0:
         return mu + sigma * inverse_normal_cdf(p, tolerance=tolerance)
-    low_z, low_p = -10.0, 0.0
-    high_z, high_p = 10.0, 1.0
+    low_z = -10.0  # 하한(lower bound)
+    high_z = 10.0  # 상한(upper bound)
     while high_z - low_z > tolerance:
         mid_z = (low_z + high_z) / 2.0  # 중간 값
         mid_p = normal_cdf(mid_z)  # 중간 값에서의 누적 확률
@@ -114,7 +114,6 @@ if __name__ == '__main__':
     plt.legend()
     plt.title('Normal Distribution CDF')
     plt.show()
-
 
     # 누적 확률이 0.9, 0.99, 0.999인 확률 변수 x를 찾음.
     # 표준 정규 분포표와 비교

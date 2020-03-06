@@ -16,7 +16,7 @@ s = 'hello'
 print(s[0])
 print(s[1])
 print(s[4])
-# print(s[5])   # IndexError 발생
+# print(s[5])  # IndexError 발생
 print(s[0:2])
 # x:y - from x(포함, include) to y(미포함, exclude)
 print(s[1:5])
@@ -25,3 +25,4 @@ print(s[1:])
 print(s[:3])
 # 범위 연산자에서 시작 인덱스가 없는 경우는 문자열의 시작(0)부터
 
+print(s[-3:-1])

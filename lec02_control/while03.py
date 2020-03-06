@@ -1,46 +1,38 @@
 """
 반복문 연습
 """
-# Shift+F6: refactor/rename
+
+# Shift+F6 (Shift+Fn+F6): refactor/rename
 # 1 + 2 + 3 + ... + 100 = ?
-# numbers = []
-# for i in range(1, 101):
-#     numbers.append(i)
-# print(sum(numbers))
+n = 100
+print(n * (n + 1) / 2)
 
-sum = 0
+numbers = [x for x in range(1, 101)]
+print(sum(numbers))
+
+total = 0
 for x in range(1, 101):
-    sum += x
-print(f'sum = {sum}')
+    total += x
+print(f'sum = {total}')
 
-
+total, n = 0, 1
+while n <= 100:
+    total += n
+    n += 1
+print(f'total = {total}')
 
 # 1 + 2 + 3 + ... + x <= 100
-n = 1
 total = 0
+x = 1
 while True:
-    total += n
-    print(f'n = {n}, sum = {total}')
+    total += x
+    print(f'x = {x}, sum = {total}')
     if total > 100:
         break
-    n += 1
+    x += 1
 
-
-# 13번
-for n in range(1, 8):
-    print('T' * n)
-
-# 14번
-# 1)
-for n in range(1, 8):
-    print(' ' * (7-n), 'T' * n)
-
-# 2)
-for n in range(1, 8):
-    for m in range(0, 8-n):
-        if n + m == 8:
-            break
-    print(' ' * m, 'T' * n)
-
-
-# 15번
+total, x = 0, 1
+while total <= 100:
+    total += x
+    print(f'x = {x}, sum = {total}')
+    x += 1

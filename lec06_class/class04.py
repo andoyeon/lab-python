@@ -3,15 +3,13 @@
 """
 from math import sqrt
 
-
 class Point:
     """
-    2차원(x-y) 평면 상의 점 1개을 저장할 수 있는 클래스
+    2차원(x-y) 평면 상의 점 1개를 저장할 수 클래스
     """
     def __init__(self, x, y):
         self.x = x
         self.y = y
-
 
     def print_point(self):
         """
@@ -19,8 +17,7 @@ class Point:
 
         :return: None
         """
-        print (f'{self.x}, {self.y}')
-
+        print(f'({self.x}, {self.y})')
 
     def distance(self, other):
         """
@@ -29,19 +26,14 @@ class Point:
         :param other: Point 객체
         :return: self와 other 사이의 거리
         """
-        # sqrt((x1-x2)**2 + (y1-y2)**2)
-        result = sqrt((self.x - other.x) ** 2 + (self.y - other.y) ** 2)
-        return result
+        return sqrt((self.x - other.x) ** 2 + (self.y - other.y) ** 2)
 
 
 if __name__ == '__main__':
-    point1 = Point(1, 2)
-    point1.print_point()
+    pt1 = Point(1, 1)
+    pt1.print_point()
 
-    point2 = Point(2, 3)
-    point1.print_point()
+    pt2 = Point(2, 3)
+    pt2.print_point()
 
-    print(point1.distance(point2))
-    print(sqrt((point1.x-2)**2 + (point1.y-3)**2))
-
-
+    print(pt1.distance(pt2))

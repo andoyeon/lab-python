@@ -1,16 +1,13 @@
-"""
-ex02.py
-"""
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 
 np.random.seed(1216)
-X = 2 * np.random.rand(100, 1)  # rand -> 0 ~ 1사이의 무작위 값
-print('X shape:', X.shape)  # 0.0 ~ 2.0숫자들로 이루어진 100x1 행렬(2차원 ndarray)
+X = 2 * np.random.rand(100, 1)
+print('X shape:', X.shape)  # 0.0 ~ 2.0 숫자들로 이루어진 100x1 행렬(2차원 ndarray)
 
-y = 4 + 3 * X + np.random.randn(100, 1) # np.random.randn(100, 1) 오차값 내기 위해
-print('y shape:', y.shape)
+y = 4 + 3 * X + np.random.randn(100, 1)
+print('y shape', y.shape)
 
 plt.scatter(X, y)
 plt.show()
@@ -23,7 +20,7 @@ print(X_b[:5])
 theta_best = np.linalg.inv(X_b.T.dot(X_b)).dot(X_b.T).dot(y)
 print('theta =', theta_best)
 
-# 행렬식을 이용해서 찾은 theta 값과 LinearRegression 클래스에서 계산된 theta 비교
+# 행렬식을 이용해서 찾은 theta 값과 LinearRegression 클래스에서 계산되 theta 비교
 lin_reg = LinearRegression()
 lin_reg.fit(X, y)
 print(f'y절편: {lin_reg.intercept_}, 기울기: {lin_reg.coef_}')
@@ -31,7 +28,7 @@ print(f'y절편: {lin_reg.intercept_}, 기울기: {lin_reg.coef_}')
 X_test = [[0],
           [1],
           [2]]
-# 행렬식: y = X_b @ theta
+#  행렬식: y = X_b @ theta
 X_test_b = np.c_[np.ones((3, 1)), X_test]
 print(X_test_b)
 y_pred = X_test_b.dot(theta_best)
@@ -44,3 +41,4 @@ print(predictions)
 plt.scatter(X, y)
 plt.plot(X_test, y_pred, 'ro-')
 plt.show()
+

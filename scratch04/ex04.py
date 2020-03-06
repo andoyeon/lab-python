@@ -6,7 +6,7 @@ import numpy as np
 # numpy.ndarray 타입의 객체를 생성
 A = np.array([
     [1, 2, 3],
-    [4, 5, 6],
+    [4, 5, 6]
 ])
 B = np.array([
     [1, 2],
@@ -25,11 +25,11 @@ print(nrows, 'x', ncols)
 # list[row][col], ndarray[row, col]
 print(A[1, 2])
 print(A[0, 0:2])
-print(A[0:2, 0:2])  # 원소의 개수 2-0
-print(A[:, 0])    # 인덱스 0번 column의 원소들로 이루어진 array
-print(A[0, :])    # 인덱스 0번 row의 원소들로 이루어진 array
+print(A[0:2, 0:2])
+print(A[:, 0])  # 인덱스 0번 컬럼의 원소들로 이루어진 array
+print(A[0, :])  # 인덱스 0번 row의 원소들로 이루어진 array
 
-# 항등 행렬(Identity Matrix)
+# 항등 행렬(Indentity Matrix)
 identity_matrix = np.identity(3, dtype=int)
 print(identity_matrix)
 
@@ -38,6 +38,5 @@ print(A.transpose())
 print(B.transpose())
 
 # 행렬 곱셈
-# nxm  mxk => nxk
 print(A.dot(B))
 print(B.dot(A))

@@ -1,6 +1,3 @@
-"""
-ex05.py
-"""
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -10,9 +7,9 @@ iris = pd.read_csv('iris.csv', header=None, names=col_names)
 
 iris_by_class = iris.groupby(by='Class')
 
-xy = [] # x축/y축에 사용할 변수 이름
+xy = []  # x축/y축에 사용할 변수 이름
 for i in range(4):  # i = 0, 1, 2, 3
-    for j in range(i+1, 4): # j = 1, 2, 3
+    for j in range(i+1, 4):  # j = (1, 2, 3), (2, 3), (3)
         xy.append((col_names[i], col_names[j]))
 print(xy)
 
@@ -32,3 +29,6 @@ for row in range(2):
 
 plt.legend()
 plt.show()
+
+
+

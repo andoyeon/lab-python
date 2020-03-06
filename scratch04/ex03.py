@@ -1,5 +1,5 @@
 """
-2차원 리스트를 이용한 행렬
+2차원 리스트(list)를 이용한 행렬
 """
 
 
@@ -7,11 +7,11 @@ def shape(matrix):
     """
     행렬의 행과 열의 개수를 tuple 형태로 리턴
 
-    :param matrix: n x m 행렬
+    :param matrix: nxm 행렬
     (행의 개수가 n개 이고, 열의 개수가 m개인 2차원 리스트)
     :return: tuple (n, m)
     """
-    nrows = len(matrix) # 행의 개수
+    nrows = len(matrix)  # 행의 개수
     ncols = len(matrix[0])  # 열의 개수
     return nrows, ncols
 
@@ -20,19 +20,20 @@ def get_row(matrix, index):
     """
     주어진 행렬(matrix)에서 index에 해당하는 row를 리턴
 
-    :param matrix: n x m 행렬
+    :param matrix: nxm 행렬
     :param index: 행 번호
     :return: 벡터(원소가 m개인 1차원 리스트)
     """
     return matrix[index]
 
+
 def get_column(matrix, index):
     """
     주어진 행렬에서 index에 해당하는 column을 리턴
-
-    :param matrix: n x m 행렬
+    
+    :param matrix: nxm 행렬
     :param index: 행 인덱스
-    :return: 벡터(원소가 n개인 1차원 리스트)
+    :return: 벡터(원소 n개인 1차원 리스트)
     """
     # result = []
     # for x in matrix:
@@ -43,24 +44,23 @@ def get_column(matrix, index):
 
 def make_matrix(nrows, ncols, fn):
     """
-    함수 fn의 리턴값들로 이루어진 nrows x nclos 행렬을 완성
+    함수 fn의 리턴값들로 이루어진 nrows x ncols 행렬을 생성
 
     :param nrows: 행의 개수
     :param ncols: 열의 개수
     :param fn: 함수(fn(nrows, ncols) = 숫자)
     :return: nrows x ncols 행렬
     """
-    # matrix = [] # 빈 리스트 생성 -> 2차원 리스트
-    # for i in range(nrows):    # 행의 개수만큼 반복
-    #     row = []    # 빈 리스트 생성 -> 행렬에 추가될 행. 1차원 리스트
-    #     for j in range(ncols):    # 열의 개수만큼 반복
-    #         row.append(fn(i, j))    # row에 아이템을 추가
+    # matrix = []  # 빈 리스트 생성 -> 2차원 리스트
+    # for i in range(nrows):  # 행의 개수만큼 반복
+    #     row = []  # 빈 리스트 생성 -> 행렬에 추가될 행. 1차원 리스트
+    #     for j in range(ncols):  # 열의 개수만큼 반복
+    #         row.append(fn(i, j))  # row에 아이템을 추가
     #     matrix.append(row)  # 행렬에 row를 추가
     # return matrix
     return [[fn(i, j) for j in range(ncols)] for i in range(nrows)]
 
 
-# 전치행렬(transpose)
 def transpose(matrix):
     """
     주어진 행렬에서 행과 열을 뒤바꾼 행렬(전치 행렬)을 리턴
@@ -74,7 +74,7 @@ def transpose(matrix):
 
 
 def transpose(matrix):
-    nrows = len(matrix)     # 원본 행렬의 행의 개수
+    nrows = len(matrix)  # 원본 행렬의 행의 개수
     ncols = len(matrix[0])  # 원본 행렬의 열의 개수
     # t = []  # 전치 행렬
     # for j in range(ncols):  # 원본 행렬의 열 개수만큼 반복
@@ -94,8 +94,8 @@ def transpose(matrix):
     #         t_row.append(matrix[i][j])
     #     t.append(t_row)
     # return t
-    return [[matrix[i][j] for i in range(nrows)] for j in range(ncols)]
-
+    return [[matrix[i][j] for i in range(nrows)]
+            for j in range(ncols)]
 
 def transpose(matrix):
     print('unpacking 연산자 *를 사용한 transpose')
@@ -104,6 +104,7 @@ def transpose(matrix):
     #     t.append(list(col))
     # return t
     return [list(x) for x in zip(*matrix)]
+
 
 if __name__ == '__main__':
     # 2x3 행렬(row=2, column=3)
@@ -120,12 +121,11 @@ if __name__ == '__main__':
     ]
 
     print(A)
-    print('Shape of A =', shape(A)) # (2, 3)
+    print('shape of A =', shape(A))  # (2, 3)
     print(B)
-    print('Shape of B =', shape(B)) # (3, 2)
-
-    print(get_row(B, 0))
-    print(get_column(B, 0))
+    print('shape of B =', shape(B))  # (3, 2)
+    print(get_row(B, 1))
+    print(get_column(B, 1))
 
     def plus(x, y):
         return x + y
@@ -136,16 +136,15 @@ if __name__ == '__main__':
     m = make_matrix(2, 2, lambda i, j: i * j)
     print(m)
 
-    # 항등행렬(Identity)
     def identity(x, y):
+        # result = 0
         # if x == y:
         #     result = 1
         # else:
         #     result = 0
 
-        # result = 1 if x == y else 0 # 3항 연산자
+        # result = 1 if x == y else 0  # 3항 연산자
         # return result
-
         return 1 if x == y else 0
 
     identity_matrix = make_matrix(3, 3,
@@ -166,3 +165,4 @@ if __name__ == '__main__':
     print('*A =', *A)
     print('B =', B)
     print('*B =', *B)
+
